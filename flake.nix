@@ -35,7 +35,15 @@
     mo2-lint.url = "github:ulfurloyd/mo2-lint-flake";
   };
 
-  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
+  outputs =
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
+      imports = [
+        (inputs.import-tree ./modules)
+      ];
+
+      debug = true;
+    };
 
   nixConfig = {
     extra-substituters = [

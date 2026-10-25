@@ -163,7 +163,7 @@
               key = "<leader>sw";
               mode = "n";
               action = "<cmd>FzfLua lgrep_curbuf<CR>";
-              desc = "List Open Buffers";
+              desc = "Search Within Buffer";
             }
             {
               key = "<leader>sr";
@@ -255,7 +255,6 @@
 
           lsp = {
             enable = true;
-            formatOnSave = true;
             presets.nixd.enable = true;
             servers.nixd = {
               filetypes = [ "nix" ];
@@ -264,6 +263,8 @@
                 options = {
                   nixos.expr = ''(builtins.getFlake "/home/wolf/Projects/phoenyxos").nixosConfigurations.${host}.options'';
                   home_manager.expr = ''(builtins.getFlake "/home/wolf/Projects/phoenyxos").nixosConfigurations.${host}.options.home-manager.users.type.getSubOptions []'';
+                  flake_parts.expr = ''(builtins.getFlake "/home/wolf/Projects/phoenyxos").debug.options'';
+                  flake_parts_persystem.expr = ''(builtins.getFlake "/home/wolf/Projects/phoenyxos").currentSystem.options'';
                 };
               };
             };
@@ -309,6 +310,10 @@
           formatter.conform-nvim = {
             enable = true;
             setupOpts = {
+              format_on_save = {
+                lsp_format = "fallback";
+                timeout_ms = 500;
+              };
               formatters_by_ft = {
                 bash = [ "shfmt" ];
                 c = [ "clang-format" ];
@@ -337,16 +342,10 @@
           };
 
           startPlugins = with pkgs.vimPlugins; [
-            oil-nvim
             mini-icons
             base16-nvim
             zellij-nav-nvim
           ];
-
-          luaConfigRC.oil = ''
-            require("mini.icons").setup({})
-            require("oil").setup({})
-          '';
 
           luaConfigRC.zellij-nav = ''
             require("zellij-nav").setup({})
@@ -355,10 +354,15 @@
           luaConfigRC.matugen = ''
             local config = vim.fn.expand("~/.config/nvim")
             vim.opt.runtimepath:append(config)
-            require("matugen").setup()
+            local ok, matugen = pcall(require, "matugen")
+            if ok then require("matugen").setup() end
           '';
 
           utility = {
+            oil-nvim = {
+              enable = true;
+              gitStatus.enable = true;
+            };
             preview.markdownPreview.enable = true;
             snacks-nvim = {
               enable = true;
@@ -429,12 +433,6 @@
                         key = "r";
                         desc = "Recent Files";
                         action = ":lua Snacks.dashboard.pick('oldfiles')";
-                      }
-                      {
-                        icon = " ";
-                        key = "c";
-                        desc = "Config";
-                        action = ":lua Snacks.dashboard.pick('files', {cwd = '~/.local/share/chezmoi/dot_config/nvim'})";
                       }
                       {
                         icon = " ";

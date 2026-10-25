@@ -22,6 +22,10 @@
     flyline.url = "github:HalFrgrd/flyline";
 
     nvf.url = "github:notashelf/nvf";
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     openmw-nix = {
       url = "git+https://codeberg.org/PopeRigby/openmw-nix.git";

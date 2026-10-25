@@ -8,6 +8,7 @@
       enable = true;
 
       settings.vim = {
+        package = inputs.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default;
         viAlias = false;
         vimAlias = true;
 
@@ -75,6 +76,12 @@
         };
 
         keymaps = [
+          {
+            key = "<leader>q";
+            mode = "n";
+            action = "<cmd>lua vim.api.nvim_buf_clear_namespace(0, vim.api.nvim_create_namespace('nvim.multicursor'), 0, -1)<CR>";
+            desc = "Clear multicursors";
+          }
           {
             key = "-";
             mode = "n";

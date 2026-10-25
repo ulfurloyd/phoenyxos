@@ -2,6 +2,9 @@
   flake.homeModules.zellij = { ... }: {
     programs.zellij = {
       enable = true;
+      settings = {
+        theme = "noctalia";
+      };
       extraConfig = ''
           keybinds clear-defaults=true {
           normal {

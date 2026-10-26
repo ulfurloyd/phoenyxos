@@ -82,6 +82,7 @@
               "discord"
               "gimp"
               "neovim"
+              "steam"
               "fastfetch"
               "zathura"
               "zellij"

@@ -15,5 +15,8 @@
       wget
       xwayland-satellite
     ];
+    nix.settings = {
+      accept-flake-config = true;
+    };
   };
 }

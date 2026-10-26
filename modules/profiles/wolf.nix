@@ -1,23 +1,24 @@
 { self, ... }: {
   flake.homeModules.wolf = { pkgs, ... }: {
-    imports = [
-      self.homeModules.bash
-      self.homeModules.umbriel
-      self.homeModules.noctalia
-      self.homeModules.kitty
-      self.homeModules.vesktop
-      self.homeModules.nvim
-      self.homeModules.git
-      self.homeModules.lazygit
-      self.homeModules.zellij
-      self.homeModules.shell-aliases
-      self.homeModules.languages
-      self.homeModules.kdeconnect
-      self.homeModules.k9s
-      self.homeModules.ssh
-      self.homeModules.devenv
-      self.homeModules.yazi
-      self.homeModules.mo2-lint
+    imports = with self.homeModules; [
+      bash
+      umbriel
+      noctalia
+      kitty
+      vesktop
+      nvim
+      git
+      lazygit
+      zellij
+      shell-aliases
+      languages
+      kdeconnect
+      k9s
+      ssh
+      devenv
+      yazi
+      mo2-lint
+      tealdeer
     ];
 
     home.packages = with pkgs; [

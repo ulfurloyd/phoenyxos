@@ -2,6 +2,7 @@
   flake.nixosModules.systemConfiguration = { pkgs, ... }: {
     imports = with self.nixosModules; [
       myHomeManager
+      comin
       umbriel
       noctalia
       keyd

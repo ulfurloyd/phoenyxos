@@ -14,7 +14,7 @@ it manages my systems and their system/home configurations.
 - `modules/features/`: applications, desktop, development, shell config modules
 - `modules/hosts/`: host bootstrap and specific configuration
 - `modules/profiles/`: shared system and home profiles (think users)
-- `modules/system`: system-level config and integrations
+- `modules/system/`: system-level config and integrations
 
 ## deployment
 

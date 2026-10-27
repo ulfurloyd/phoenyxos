@@ -30,6 +30,13 @@
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-doom-emacs-unstraightened = {
+      url = "github:marienz/nix-doom-emacs-unstraightened";
+      inputs = {
+        doomdir.url = "./doom";
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
     openmw-nix = {
       url = "git+https://codeberg.org/PopeRigby/openmw-nix.git";

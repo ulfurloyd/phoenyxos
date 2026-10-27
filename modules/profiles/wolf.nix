@@ -19,6 +19,7 @@
       yazi
       mo2-lint
       tealdeer
+      emacs
     ];
 
     home.packages = with pkgs; [

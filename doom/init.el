@@ -1,5 +1,6 @@
 (doom!
  :completion
+ (company +childframe)
  (vertico +icons)
 
  :ui
@@ -33,6 +34,7 @@
  syntax
 
  :tools
+ lsp
  magit
  pdf
 
@@ -40,7 +42,7 @@
  emacs-lisp
  json
  lua
- nix
+ (nix +lsp +eglot)
  org
  sh
 

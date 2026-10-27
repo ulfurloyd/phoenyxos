@@ -28,6 +28,36 @@
                 (delete-frame))))
 #+end_src
 
+* LSP
+
+** nixd
+
+#+begin_src emacs-lisp
+(after! eglot
+  (add-to-list 'eglot-server-programs
+               '(nix-mode . ("nixd")))
+
+  (setq-default eglot-workspace-configuration
+    `(:nixd
+      (:nixpkgs
+       (:expr "import (builtins.getFlake \"/home/wolf/Projects/phoenyxos\").inputs.nixpkgs { }")
+       :formatting
+       (:command ["nixfmt"])
+       :options
+       (:nixos
+        (:expr ,(format
+                 "(builtins.getFlake \"/home/wolf/Projects/phoenyxos\").nixosConfigurations.%s.options"
+                 (system-name)))
+        :home_manager
+        (:expr ,(format
+                 "(builtins.getFlake \"/home/wolf/Projects/phoenyxos\").nixosConfigurations.%s.options.home-manager.users.type.getSubOptions []"
+                 (system-name)))
+        :flake_parts
+        (:expr "(builtins.getFlake \"/home/wolf/Projects/phoenyxos\").debug.options")
+        :flake_parts_persystem
+        (:expr "(builtins.getFlake \"/home/wolf/Projects/phoenyxos\").currentSystem.options"))))))
+#+end_src
+
 * Org Mode
 
 #+begin_src emacs-lisp

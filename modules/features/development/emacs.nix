@@ -8,6 +8,11 @@
       enable = true;
       emacs = pkgs.emacs-pgtk;
       tangleArgs = "--all config.org";
+
+      extraBinPackages = with pkgs; [
+        nixd
+        nixfmt
+      ];
     };
 
     services.emacs = {

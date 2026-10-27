@@ -10,6 +10,7 @@
       fonts
       kdeconnect
       nh
+      nix-gc
     ];
     environment.systemPackages = with pkgs; [
       vim

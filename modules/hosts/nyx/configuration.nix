@@ -102,6 +102,7 @@
       imports = [
         self.homeModules.wolf
         self.homeModules.nyxUmbriel
+        self.homeModules.beets
       ];
     };
 

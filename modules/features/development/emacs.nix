@@ -12,6 +12,7 @@
       extraBinPackages = with pkgs; [
         nixd
         nixfmt
+        yaml-language-server
       ];
     };
 

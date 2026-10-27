@@ -34,7 +34,7 @@
  syntax
 
  :tools
- lsp
+ (lsp +eglot)
  magit
  pdf
 
@@ -45,6 +45,7 @@
  (nix +lsp +eglot)
  org
  sh
+ (yaml +lsp)
 
  :config
  (default +bindings +smartparens))

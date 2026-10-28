@@ -14,6 +14,9 @@
 (map! :leader
       :desc "Open Dired"
       "d d" #'dired-jump)
+(map! :leader
+      :desc "Open org-directory in Dired"
+      "o o" (cmd! (dired org-directory)))
 #+end_src
 
 * Configuration
@@ -29,6 +32,16 @@
 
 (after! vterm
   (setq vterm-shell (executable-find "zsh")))
+#+end_src
+
+* Projectile Projects
+
+#+begin_src emacs-lisp
+(after! projectile
+  (setq projectile-project-search-path
+        '("~/Projects/phoenyxos/"
+          "~/Projects/phoenyxlab/"
+          "~/org/")))
 #+end_src
 
 * LSP

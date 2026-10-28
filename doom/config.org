@@ -26,6 +26,9 @@
   (advice-add 'doom/delete-frame-with-prompt :override
               (lambda ()
                 (delete-frame))))
+
+(after! vterm
+  (setq vterm-shell (executable-find "zsh")))
 #+end_src
 
 * LSP

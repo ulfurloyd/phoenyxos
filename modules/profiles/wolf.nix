@@ -2,6 +2,7 @@
   flake.homeModules.wolf = { pkgs, ... }: {
     imports = with self.homeModules; [
       bash
+      zsh
       umbriel
       noctalia
       kitty
@@ -32,6 +33,7 @@
       tre-command
       bat
       glib
+      feishin
     ];
 
     programs.btop.enable = true;

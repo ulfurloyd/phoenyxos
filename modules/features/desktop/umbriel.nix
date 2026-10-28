@@ -103,10 +103,10 @@
           "XF86AudioMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           "XF86AudioMicMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
 
-          "XF86AudioPlay" = "spawn:playerctl -p %any play-pause";
-          "XF86AudioStop" = "spawn:playerctl -p %any stop";
-          "XF86AudioPrev" = "spawn:playerctl -p %any previous";
-          "XF86AudioNext" = "spawn:playerctl -p %any next";
+          "XF86AudioPlay" = "spawn:noctalia msg media toggle";
+          "XF86AudioStop" = "spawn:noctalia msg media stop";
+          "XF86AudioPrev" = "spawn:noctalia msg media previous";
+          "XF86AudioNext" = "spawn:noctalia msg media next";
 
           # screen brightness
           "XF86MonBrightnessUp" = "spawn:noctalia msg brightness-up";

@@ -19,6 +19,7 @@
           autostart = [
             "noctalia"
             "xwayland-satellite"
+            "fcitx5 -d --replace"
           ];
           mod_key = "Super";
           xwayland = true;

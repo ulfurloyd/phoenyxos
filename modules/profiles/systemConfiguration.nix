@@ -11,6 +11,7 @@
       kdeconnect
       nh
       nix-gc
+      fcitx
     ];
     environment.systemPackages = with pkgs; [
       vim

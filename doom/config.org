@@ -13,7 +13,7 @@
 #+begin_src emacs-lisp
 (map! :leader
       :desc "Open Dired"
-      "d d" #'dired)
+      "d d" #'dired-jump)
 #+end_src
 
 * Configuration

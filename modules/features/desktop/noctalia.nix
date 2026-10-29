@@ -125,6 +125,9 @@
             ];
           };
         };
+        accessibility = {
+          ui_scale = 1.1;
+        };
         shell = {
           font_family = "Fira Sans";
           umbriel_overview_type_to_launch_enabled = true;
@@ -132,15 +135,14 @@
           polkit_agent = true;
           settings_window_translucent = true;
           telemetry_enabled = false;
-          ui_scale = 1.1;
           screenshot = {
             directory = "/home/wolf/Pictures/Screenshots";
             filename_pattern = "%Y_%m-%d_%H:%M:%S";
             confirm_region = true;
           };
           panel = {
-            attach_session = true;
-            attach_launcher = true;
+            session_placement = "attached";
+            launcher_placement = "attached";
             clipboard_placement = "attached";
             transparency_mode = "glass";
           };

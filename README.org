@@ -9,6 +9,7 @@ it manages my systems and their system/home configurations.
 - hermes: laptop
 
 * structure
+- ~doom/~: my doom emacs literate config
 - ~modules/features/~: applications, desktop, development, shell config modules
 - ~modules/hosts/~: host bootstrap and specific configuration
 - ~modules/profiles/~: shared system and home profiles

@@ -17,6 +17,16 @@
 (map! :leader
       :desc "Open org-directory in Dired"
       "o o" (cmd! (dired org-directory)))
+(map! :leader
+      "s p" nil)
+(map! :leader
+      "s P" nil)
+(map! :leader
+      :desc "Grep current project"
+      "s g" #'+default/search-project)
+(map! :leader
+      :desc "Grep other project"
+      "s G" #'+default/search-other-project)
 #+end_src
 
 * Configuration

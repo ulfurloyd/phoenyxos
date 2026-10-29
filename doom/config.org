@@ -5,7 +5,7 @@
 * Appearance
 
 #+begin_src emacs-lisp
-(setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 15))
+(setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 16))
 #+end_src
 
 * Keybindings

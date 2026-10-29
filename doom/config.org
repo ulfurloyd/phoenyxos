@@ -100,7 +100,20 @@
         org-agenda-start-on-weekday 1
         org-agenda-span 7
         org-deadline-warning-days 7
-        org-log-done 'time))
+        org-log-done 'time
+        
+        org-capture-templates
+        '(("t" "Task" entry
+           (file+headline "~/org/inbox.org" "Inbox")
+           "* TODO %?\n %U\n")
+
+          ("n" "Note" entry
+           (file+headline "~/org/inbox.org" "Notes")
+           "* %?\n %U\n")
+
+          ("p" "Project task" entry
+           (file+headline "~/org/projects.org" "Projects")
+           "** TODO %?\n %U\n"))))
 #+end_src
 
 * Noctalia Theme

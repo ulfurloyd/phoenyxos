@@ -88,8 +88,19 @@
 
 #+begin_src emacs-lisp
 (after! org
-  (setq org-directory "~/org"
-        org-agenda-files '("~/org-agenda")))
+  (setq org-directory (expand-file-name "~/org/")
+        org-default-notes-file (expand-file-name "inbox.org" org-directory)
+        
+        org-agenda-files
+                     (list (expand-file-name "inbox.org" org-directory)
+                           (expand-file-name "tasks.org" org-directory)
+                           (expand-file-name "projects.org" org-directory)
+                           (expand-file-name "calendar.org" org-directory))
+
+        org-agenda-start-on-weekday 1
+        org-agenda-span 7
+        org-deadline-warning-days 7
+        org-log-done 'time))
 #+end_src
 
 * Noctalia Theme

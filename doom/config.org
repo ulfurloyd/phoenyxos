@@ -1,15 +1,14 @@
 #+title: doom emacs literate config
 #+author: wolf
-#+startup: overview
+#+startup: showeverything
 
 * Appearance
-
 #+begin_src emacs-lisp
 (setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 16))
+(setq display-line-numbers-type 'relative)
 #+end_src
 
 * Keybindings
-
 #+begin_src emacs-lisp
 (map! :leader
       :desc "Open Dired"
@@ -30,7 +29,6 @@
 #+end_src
 
 * Configuration
-
 #+begin_src emacs-lisp
 (setq doom-user-dir (expand-file-name "~/Projects/phoenyxos/"))
 (setq confirm-kill-emacs nil
@@ -45,7 +43,6 @@
 #+end_src
 
 * Projectile Projects
-
 #+begin_src emacs-lisp
 (after! projectile
   (setq projectile-project-search-path
@@ -55,9 +52,7 @@
 #+end_src
 
 * LSP
-
 ** nixd
-
 #+begin_src emacs-lisp
 (after! eglot
   (add-to-list 'eglot-server-programs
@@ -85,7 +80,6 @@
 #+end_src
 
 * Org Mode
-
 #+begin_src emacs-lisp
 (after! org
   (setq org-directory (expand-file-name "~/org/")
@@ -117,7 +111,6 @@
 #+end_src
 
 * Noctalia Theme
-
 #+begin_src emacs-lisp
 (add-to-list 'custom-theme-load-path "~/.config/emacs/themes/")
 (load-theme 'noctalia t)

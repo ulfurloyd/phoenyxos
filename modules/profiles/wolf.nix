@@ -21,6 +21,7 @@
       mo2-lint
       tealdeer
       emacs
+      wlr-which-key
     ];
 
     home.packages = with pkgs; [

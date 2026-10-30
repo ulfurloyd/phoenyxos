@@ -6,7 +6,12 @@
 
     programs.mo2-lint = {
       enable = true;
-      settings.instance.launcher = "steam";
+      settings = {
+        instance = {
+          launcher = "steam";
+          folders.folder_name = "mo2-{game}";
+        };
+      };
     };
   };
 }

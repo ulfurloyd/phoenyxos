@@ -21,6 +21,7 @@
       mo2-lint
       tealdeer
       emacs
+      wlr-which-key
     ];
 
     home.packages = with pkgs; [
@@ -34,7 +35,6 @@
       bat
       glib
       feishin
-      wlr-which-key
     ];
 
     programs.btop.enable = true;

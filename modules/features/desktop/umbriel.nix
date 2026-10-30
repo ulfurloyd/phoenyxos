@@ -57,6 +57,7 @@
           "Mod+Space" = "spawn:noctalia msg panel-toggle launcher";
           "Mod+O" = "overview-toggle";
           "Mod+E" = "spawn:emacsclient --create-frame";
+          "Mod+B" = "spawn:wlr-which-key";
 
           "Mod+1" = "workspace-switch:1";
           "Mod+2" = "workspace-switch:2";

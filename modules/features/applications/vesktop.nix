@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.vesktop = {
+  flake.modules.homeManager.vesktop = {
     programs.vesktop.enable = true;
   };
 }

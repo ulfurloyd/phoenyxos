@@ -3,12 +3,9 @@
     imports = (with self.homeModules; [
       umbriel
       noctalia
-      vesktop
-      kdeconnect
       k9s
       ssh
       mo2-lint
-      wlr-which-key
     ])
     ++ [
       self.modules.homeManager.fastfetch
@@ -25,6 +22,9 @@
       self.modules.homeManager.zellij
       self.modules.homeManager.yazi
       self.modules.homeManager.tealdeer
+      self.modules.homeManager.vesktop
+      self.modules.homeManager.kdeconnect
+      self.modules.homeManager.wlr-which-key
     ];
 
     home.packages = with pkgs; [

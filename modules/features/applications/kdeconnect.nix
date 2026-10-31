@@ -3,7 +3,7 @@
     programs.kdeconnect.enable = true;
   };
 
-  flake.homeModules.kdeconnect = {
+  flake.modules.homeManager.kdeconnect = {
     services.kdeconnect = {
       enable = true;
       indicator = true;

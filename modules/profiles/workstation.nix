@@ -12,6 +12,10 @@
       fcitx
       nh
       flyline
+      overlays
+      steam
+      openssh
+      tailscale
     ];
 
     nix.settings.experimental-features = [
@@ -74,9 +78,6 @@
       extraGroups = [
         "networkmanager"
         "wheel"
-      ];
-      packages = with pkgs; [
-        kdePackages.kate
       ];
     };
 

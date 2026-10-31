@@ -1,12 +1,8 @@
 { self, ... }: {
   flake.modules.nixos.hermesConfiguration = { ... }: {
     imports = with self.modules.nixos; [
-      overlays
       hermesHardware
       noctalia-greeter
-      steam
-      openssh
-      tailscale
       hermesTailscale
     ];
 

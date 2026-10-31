@@ -1,13 +1,9 @@
 { self, ... }: {
   flake.modules.nixos.nyxConfiguration = { ... }: {
     imports = with self.modules.nixos; [
-      overlays
       nyxHardware
       noctalia-greeter
       k3s
-      steam
-      openssh
-      tailscale
       nyxTailscale
     ];
 

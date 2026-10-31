@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.nixosModules.flyline = {
+  flake.modules.nixos.flyline = {
     imports = [
       inputs.flyline.nixosModules.default
     ];

@@ -4,10 +4,10 @@
     modules = (with self.nixosModules; [
       nyxConfiguration
       systemConfiguration
-      openmw
     ])
     ++ (with self.modules.nixos; [
       nvidia
+      openmw
     ]);
   };
 }

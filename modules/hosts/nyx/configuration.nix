@@ -5,7 +5,7 @@
       self.nixosModules.nyxHardware
       self.modules.nixos.noctalia-greeter
       self.modules.nixos.k3s
-      self.nixosModules.steam
+      self.modules.nixos.steam
       self.modules.nixos.openssh
       self.modules.nixos.tailscale
       self.nixosModules.nyxTailscale

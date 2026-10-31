@@ -4,7 +4,7 @@
       self.modules.nixos.overlays
       self.nixosModules.hermesHardware
       self.modules.nixos.noctalia-greeter
-      self.nixosModules.steam
+      self.modules.nixos.steam
       self.modules.nixos.openssh
       self.modules.nixos.tailscale
       self.nixosModules.hermesTailscale

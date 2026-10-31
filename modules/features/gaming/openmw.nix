@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.nixosModules.openmw = { pkgs, ... }: {
+  flake.modules.nixos.openmw = { pkgs, ... }: {
     environment.systemPackages = [
       pkgs.openmw
       inputs.openmw-nix.packages.${pkgs.stdenv.hostPlatform.system}.umo

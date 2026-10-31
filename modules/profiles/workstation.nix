@@ -45,6 +45,45 @@
       LC_TIME = "en_IN";
     };
 
+    # kde
+    services.xserver.enable = true;
+    services.desktopManager.plasma6.enable = true;
+
+    services.xserver.xkb = {
+      layout = "us";
+      variant = "";
+    };
+
+    # printing
+    services.printing.enable = true;
+
+    # audio
+    services.pulseaudio.enable = false;
+    security.rtkit.enable = true;
+    services.pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
+
+    # user
+    users.users."wolf" = {
+      isNormalUser = true;
+      description = "wolf";
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
+      packages = with pkgs; [
+        kdePackages.kate
+      ];
+    };
+
+    # packages
+    programs.firefox.enable = true;
+    nixpkgs.config.allowUnfree = true;
+
     environment.systemPackages = with pkgs; [
       vim
       wget

@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.homeModules.nvim =
+  flake.modules.homeManager.nvim =
     { pkgs, osConfig, ... }:
     let
       host = osConfig.networking.hostName;

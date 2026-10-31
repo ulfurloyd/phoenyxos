@@ -5,7 +5,6 @@
       noctalia
       kitty
       vesktop
-      nvim
       zellij
       kdeconnect
       k9s
@@ -25,6 +24,7 @@
       self.modules.homeManager.lazygit
       self.modules.homeManager.languages
       self.modules.homeManager.devenv
+      self.modules.homeManager.nvim
     ];
 
     home.packages = with pkgs; [

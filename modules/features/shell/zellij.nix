@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.zellij = { ... }: {
+  flake.modules.homeManager.zellij = { ... }: {
     programs.zellij = {
       enable = true;
       settings = {

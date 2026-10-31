@@ -3,15 +3,11 @@
     imports = (with self.homeModules; [
       umbriel
       noctalia
-      kitty
       vesktop
-      zellij
       kdeconnect
       k9s
       ssh
-      yazi
       mo2-lint
-      tealdeer
       wlr-which-key
     ])
     ++ [
@@ -25,6 +21,10 @@
       self.modules.homeManager.devenv
       self.modules.homeManager.nvim
       self.modules.homeManager.emacs
+      self.modules.homeManager.kitty
+      self.modules.homeManager.zellij
+      self.modules.homeManager.yazi
+      self.modules.homeManager.tealdeer
     ];
 
     home.packages = with pkgs; [

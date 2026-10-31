@@ -102,7 +102,7 @@
       imports = [
         self.homeModules.wolf
         self.modules.homeManager.nyxUmbriel
-        self.homeModules.beets
+        self.modules.homeManager.beets
       ];
     };
 

@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.beets = { pkgs, ... }:
+  flake.modules.homeManager.beets = { pkgs, ... }:
   let
     beetsWithLyrics = pkgs.python3.pkgs.beets.override (prev: {
       pluginOverrides.lyrics.enable = true;

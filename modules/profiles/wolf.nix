@@ -23,7 +23,6 @@
       emacs
       wlr-which-key
       fastfetch
-      jq
     ];
 
     home.packages = with pkgs; [
@@ -37,6 +36,7 @@
       bat
       glib
       feishin
+      jq
     ];
 
     programs.btop.enable = true;

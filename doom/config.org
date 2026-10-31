@@ -26,6 +26,12 @@
 (map! :leader
       :desc "Grep other project"
       "s G" #'+default/search-other-project)
+(map! :leader
+      :desc "Find files in project"
+      "f f" #'consult-find)
+(map! :leader
+      :desc "Evaluate selection"
+      "e v" #'eval-region)
 #+end_src
 
 * Configuration

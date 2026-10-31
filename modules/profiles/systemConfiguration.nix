@@ -1,18 +1,20 @@
 { self, ... }: {
   flake.nixosModules.systemConfiguration = { pkgs, ... }: {
-    imports = with self.nixosModules; [
-      myHomeManager
+    imports = (with self.nixosModules; [
       comin
       umbriel
       noctalia
-      keyd
       flyline
-      fonts
       kdeconnect
       nh
-      nix-gc
       fcitx
-    ];
+    ])
+    ++ (with self.modules.nixos; [
+      myHomeManager
+      keyd
+      fonts
+      nix-gc
+    ]);
     environment.systemPackages = with pkgs; [
       vim
       wget

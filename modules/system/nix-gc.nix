@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.nix-gc = { ... }: {
+  flake.modules.nixos.nix-gc = { ... }: {
     nix.gc = {
       automatic = true;
       dates = "weekly";

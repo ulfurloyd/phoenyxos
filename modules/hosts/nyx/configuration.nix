@@ -1,7 +1,7 @@
 { self, ... }: {
   flake.nixosModules.nyxConfiguration = { pkgs, ... }: {
     imports = [
-      self.nixosModules.overlays
+      self.modules.nixos.overlays
       self.nixosModules.nyxHardware
       self.nixosModules.noctalia-greeter
       self.nixosModules.k3s

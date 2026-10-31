@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.shell-aliases = { ... }: {
+  flake.modules.homeManager.shell-aliases = { ... }: {
     home.shellAliases = {
       cd = "z";
       ls = "eza -lah";

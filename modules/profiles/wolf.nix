@@ -1,8 +1,6 @@
 { self, ... }: {
   flake.homeModules.wolf = { pkgs, ... }: {
-    imports = with self.homeModules; [
-      bash
-      zsh
+    imports = (with self.homeModules; [
       umbriel
       noctalia
       kitty
@@ -11,7 +9,6 @@
       git
       lazygit
       zellij
-      shell-aliases
       languages
       kdeconnect
       k9s
@@ -22,7 +19,12 @@
       tealdeer
       emacs
       wlr-which-key
-      fastfetch
+    ])
+    ++ [
+      self.modules.homeManager.fastfetch
+      self.modules.homeManager.bash
+      self.modules.homeManager.zsh
+      self.modules.homeManager.shell-aliases
     ];
 
     home.packages = with pkgs; [

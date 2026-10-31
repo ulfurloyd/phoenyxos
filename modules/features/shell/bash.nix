@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.bash = { pkgs, ... }: {
+  flake.modules.homeManager.bash = { pkgs, ... }: {
     programs.eza = {
       enable = true;
       enableBashIntegration = true;

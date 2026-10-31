@@ -90,7 +90,7 @@
 
     home-manager.users.wolf = {
       imports = [
-        self.homeModules.wolf
+        self.modules.homeManager.wolf
         self.modules.homeManager.hermesNoctalia
       ];
     };

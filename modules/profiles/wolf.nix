@@ -1,5 +1,5 @@
 { self, ... }: {
-  flake.homeModules.wolf = { pkgs, ... }: {
+  flake.modules.homeManager.wolf = { pkgs, ... }: {
     imports = with self.modules.homeManager; [
       fastfetch
       bash

@@ -1,5 +1,5 @@
 { self, ... }: {
-  flake.modules.nixos.systemConfiguration = { pkgs, ... }: {
+  flake.modules.nixos.workstation = { pkgs, ... }: {
     imports = with self.modules.nixos; [
       myHomeManager
       umbriel

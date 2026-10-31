@@ -2,20 +2,24 @@
 
 My NixOS configuration, built with flakes, flake-parts and a modular structure.
 
-it manages my systems and their system/home configurations.
+It manages my systems and their system/home configurations.
 
 * hosts
 - nyx: desktop
 - hermes: laptop
 
 * structure
-- ~doom/~: my doom emacs literate config
-- ~modules/features/~: applications, desktop, development, shell config modules
-- ~modules/hosts/~: host bootstrap and specific configuration
-- ~modules/profiles/~: shared system and home profiles
-- ~modules/system/~: system-level config and integrations
+- ~doom/~: Literate Doom Emacs configuration
+- ~modules/features/~: Feature modules organized by domain: desktop, development,
+  gaming, media, networking, shell, virtualization
+- ~modules/hosts/~: Host entry points, hardware configuration, and host-specific settings
+- ~modules/profiles/~: Shared system and Home Manager profiles
+- ~modules/system/~: System-level configuration and integrations
+
+Host configurations compose shared profiles with host-specific modules.
 
 * deployment
-Systems are built from the flake, ~comin~ reconciles this repo as the source of truth
+The flake is the source of truth for my systems. ~Comin~ monitors this repository
+and automatically reconciles deployed configurations.
 
-Config changes are tested locally with ~nh os test~, then pushed upstream.
+Changes are tested locally with ~nh os test~, then committed and pushed to main for deployment.

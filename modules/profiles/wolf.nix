@@ -23,6 +23,7 @@
       emacs
       wlr-which-key
       fastfetch
+      jq
     ];
 
     home.packages = with pkgs; [

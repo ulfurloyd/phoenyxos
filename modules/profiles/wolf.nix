@@ -3,9 +3,6 @@
     imports = (with self.homeModules; [
       umbriel
       noctalia
-      k9s
-      ssh
-      mo2-lint
     ])
     ++ [
       self.modules.homeManager.fastfetch
@@ -25,6 +22,9 @@
       self.modules.homeManager.vesktop
       self.modules.homeManager.kdeconnect
       self.modules.homeManager.wlr-which-key
+      self.modules.homeManager.k9s
+      self.modules.homeManager.ssh
+      self.modules.homeManager.mo2-lint
     ];
 
     home.packages = with pkgs; [

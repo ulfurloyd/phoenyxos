@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.homeModules.mo2-lint = {
+  flake.modules.homeManager.mo2-lint = {
     imports = [
       inputs.mo2-lint.homeModules.default
     ];

@@ -1,30 +1,28 @@
 { self, ... }: {
   flake.homeModules.wolf = { pkgs, ... }: {
-    imports = (with self.homeModules; [
-    ])
-    ++ [
-      self.modules.homeManager.fastfetch
-      self.modules.homeManager.bash
-      self.modules.homeManager.zsh
-      self.modules.homeManager.shell-aliases
-      self.modules.homeManager.git
-      self.modules.homeManager.lazygit
-      self.modules.homeManager.languages
-      self.modules.homeManager.devenv
-      self.modules.homeManager.nvim
-      self.modules.homeManager.emacs
-      self.modules.homeManager.kitty
-      self.modules.homeManager.zellij
-      self.modules.homeManager.yazi
-      self.modules.homeManager.tealdeer
-      self.modules.homeManager.vesktop
-      self.modules.homeManager.kdeconnect
-      self.modules.homeManager.wlr-which-key
-      self.modules.homeManager.k9s
-      self.modules.homeManager.ssh
-      self.modules.homeManager.mo2-lint
-      self.modules.homeManager.umbriel
-      self.modules.homeManager.noctalia
+    imports = with self.modules.homeManager; [
+      fastfetch
+      bash
+      zsh
+      shell-aliases
+      git
+      lazygit
+      languages
+      devenv
+      nvim
+      emacs
+      kitty
+      zellij
+      yazi
+      tealdeer
+      vesktop
+      kdeconnect
+      wlr-which-key
+      k9s
+      ssh
+      mo2-lint
+      umbriel
+      noctalia
     ];
 
     home.packages = with pkgs; [

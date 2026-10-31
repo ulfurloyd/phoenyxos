@@ -1,12 +1,10 @@
 { self, inputs, ... }: {
   flake.nixosConfigurations.nyx = inputs.nixpkgs.lib.nixosSystem {
-    modules = (with self.nixosModules; [
+    modules = with self.modules.nixos; [
       nyxConfiguration
       systemConfiguration
-    ])
-    ++ (with self.modules.nixos; [
       nvidia
       openmw
-    ]);
+    ];
   };
 }

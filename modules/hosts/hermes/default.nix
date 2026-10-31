@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
   flake.nixosConfigurations.hermes = inputs.nixpkgs.lib.nixosSystem {
-    modules = with self.nixosModules; [
+    modules = with self.modules.nixos; [
       hermesConfiguration
       systemConfiguration
     ];

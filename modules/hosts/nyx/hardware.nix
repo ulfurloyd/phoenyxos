@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.nyxHardware =
+  flake.modules.nixos.nyxHardware =
     {
       config,
       lib,

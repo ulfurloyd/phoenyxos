@@ -2,7 +2,7 @@
   flake.nixosModules.hermesConfiguration = { pkgs, ... }: {
     imports = [
       self.modules.nixos.overlays
-      self.nixosModules.hermesHardware
+      self.modules.nixos.hermesHardware
       self.modules.nixos.noctalia-greeter
       self.modules.nixos.steam
       self.modules.nixos.openssh

@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.hermesHardware =
+  flake.modules.nixos.hermesHardware =
     {
       config,
       lib,

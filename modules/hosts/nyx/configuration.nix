@@ -2,7 +2,7 @@
   flake.nixosModules.nyxConfiguration = { pkgs, ... }: {
     imports = [
       self.modules.nixos.overlays
-      self.nixosModules.nyxHardware
+      self.modules.nixos.nyxHardware
       self.modules.nixos.noctalia-greeter
       self.modules.nixos.k3s
       self.modules.nixos.steam

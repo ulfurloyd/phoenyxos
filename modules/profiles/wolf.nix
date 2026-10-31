@@ -40,8 +40,6 @@
     ];
 
     programs.btop.enable = true;
-    programs.bash.enable = true;
-    programs.git.enable = true;
 
     home.stateVersion = "26.05";
   };

@@ -1,13 +1,13 @@
 { self, ... }: {
   flake.nixosModules.hermesConfiguration = { pkgs, ... }: {
-    imports = [
-      self.modules.nixos.overlays
-      self.modules.nixos.hermesHardware
-      self.modules.nixos.noctalia-greeter
-      self.modules.nixos.steam
-      self.modules.nixos.openssh
-      self.modules.nixos.tailscale
-      self.nixosModules.hermesTailscale
+    imports = with self.modules.nixos; [
+      overlays
+      hermesHardware
+      noctalia-greeter
+      steam
+      openssh
+      tailscale
+      hermesTailscale
     ];
 
     nix.settings.experimental-features = [

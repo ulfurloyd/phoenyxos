@@ -1,14 +1,14 @@
 { self, ... }: {
   flake.nixosModules.nyxConfiguration = { pkgs, ... }: {
-    imports = [
-      self.modules.nixos.overlays
-      self.modules.nixos.nyxHardware
-      self.modules.nixos.noctalia-greeter
-      self.modules.nixos.k3s
-      self.modules.nixos.steam
-      self.modules.nixos.openssh
-      self.modules.nixos.tailscale
-      self.nixosModules.nyxTailscale
+    imports = with self.modules.nixos; [
+      overlays
+      nyxHardware
+      noctalia-greeter
+      k3s
+      steam
+      openssh
+      tailscale
+      nyxTailscale
     ];
 
     nix.settings.experimental-features = [

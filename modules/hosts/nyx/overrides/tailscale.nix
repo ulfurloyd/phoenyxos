@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.nyxTailscale = {
+  flake.modules.nixos.nyxTailscale = {
     services.tailscale = {
       useRoutingFeatures = "server";
     };

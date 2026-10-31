@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.noctalia-greeter = { pkgs, ... }: {
+  flake.modules.nixos.noctalia-greeter = { pkgs, ... }: {
     services.displayManager.noctalia-greeter = {
       enable = true;
       settings = {

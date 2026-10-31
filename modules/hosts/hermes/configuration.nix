@@ -3,7 +3,7 @@
     imports = [
       self.modules.nixos.overlays
       self.nixosModules.hermesHardware
-      self.nixosModules.noctalia-greeter
+      self.modules.nixos.noctalia-greeter
       self.nixosModules.steam
       self.modules.nixos.openssh
       self.modules.nixos.tailscale

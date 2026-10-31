@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.nixosModules.noctalia = {
+  flake.modules.nixos.noctalia = {
     imports = [
       inputs.noctalia.nixosModules.default
     ];

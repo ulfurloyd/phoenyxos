@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.nixosModules.umbriel = {
+  flake.modules.nixos.umbriel = {
     imports = [
       inputs.umbriel.nixosModules.default
     ];

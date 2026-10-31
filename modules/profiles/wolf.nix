@@ -1,6 +1,7 @@
 { self, ... }: {
   flake.modules.homeManager.wolf = { pkgs, ... }: {
     imports = with self.modules.homeManager; [
+      noctalia-desktop
       fastfetch
       bash
       zsh
@@ -21,8 +22,6 @@
       k9s
       ssh
       mo2-lint
-      umbriel
-      noctalia
     ];
 
     home.packages = with pkgs; [

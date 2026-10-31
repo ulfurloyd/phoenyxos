@@ -2,8 +2,7 @@
   flake.modules.nixos.workstation = { pkgs, ... }: {
     imports = with self.modules.nixos; [
       home-manager
-      umbriel
-      noctalia
+      noctalia-desktop
       noctalia-greeter
       comin
       keyd

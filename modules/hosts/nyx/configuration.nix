@@ -101,7 +101,7 @@
     home-manager.users.wolf = {
       imports = [
         self.homeModules.wolf
-        self.homeModules.nyxUmbriel
+        self.modules.homeManager.nyxUmbriel
         self.homeModules.beets
       ];
     };

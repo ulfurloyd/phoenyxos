@@ -1,5 +1,5 @@
 { ... }: {
-  flake.homeModules.nyxUmbriel = {
+  flake.modules.homeManager.nyxUmbriel = {
     programs.umbriel.settings.output = {
       "DP-1" = {
         mode = "1920x1080@144";

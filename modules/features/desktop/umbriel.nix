@@ -7,7 +7,7 @@
     programs.umbriel.enable = true;
   };
 
-  flake.homeModules.umbriel = {
+  flake.modules.homeManager.umbriel = {
     imports = [
       inputs.umbriel.homeModules.default
     ];

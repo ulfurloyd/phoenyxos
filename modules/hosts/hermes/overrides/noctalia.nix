@@ -1,5 +1,5 @@
 { lib, ... }: {
-  flake.homeModules.hermesNoctalia = {
+  flake.modules.homeManager.hermesNoctalia = {
     programs.noctalia.settings = {
       bar.primary = {
         end = lib.mkForce [

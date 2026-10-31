@@ -1,8 +1,6 @@
 { self, ... }: {
   flake.homeModules.wolf = { pkgs, ... }: {
     imports = (with self.homeModules; [
-      umbriel
-      noctalia
     ])
     ++ [
       self.modules.homeManager.fastfetch
@@ -25,6 +23,8 @@
       self.modules.homeManager.k9s
       self.modules.homeManager.ssh
       self.modules.homeManager.mo2-lint
+      self.modules.homeManager.umbriel
+      self.modules.homeManager.noctalia
     ];
 
     home.packages = with pkgs; [

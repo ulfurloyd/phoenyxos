@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.k3s = { ... }: {
+  flake.modules.nixos.k3s = { ... }: {
     services.k3s = {
       enable = true;
       role = "server";

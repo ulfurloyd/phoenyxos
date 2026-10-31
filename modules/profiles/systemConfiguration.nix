@@ -1,7 +1,6 @@
 { self, ... }: {
   flake.nixosModules.systemConfiguration = { pkgs, ... }: {
     imports = (with self.nixosModules; [
-      comin
       umbriel
       noctalia
       flyline
@@ -11,6 +10,7 @@
     ])
     ++ (with self.modules.nixos; [
       myHomeManager
+      comin
       keyd
       fonts
       nix-gc

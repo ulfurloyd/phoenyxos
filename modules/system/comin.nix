@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.nixosModules.comin = { config, ... }: {
+  flake.modules.nixos.comin = { config, ... }: {
     imports = [
       inputs.comin.nixosModules.comin
     ];

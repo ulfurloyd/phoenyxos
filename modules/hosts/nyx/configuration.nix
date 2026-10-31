@@ -4,10 +4,10 @@
       self.modules.nixos.overlays
       self.nixosModules.nyxHardware
       self.nixosModules.noctalia-greeter
-      self.nixosModules.k3s
+      self.modules.nixos.k3s
       self.nixosModules.steam
-      self.nixosModules.openssh
-      self.nixosModules.tailscale
+      self.modules.nixos.openssh
+      self.modules.nixos.tailscale
       self.nixosModules.nyxTailscale
     ];
 

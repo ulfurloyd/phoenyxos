@@ -5,8 +5,8 @@
       self.nixosModules.hermesHardware
       self.nixosModules.noctalia-greeter
       self.nixosModules.steam
-      self.nixosModules.openssh
-      self.nixosModules.tailscale
+      self.modules.nixos.openssh
+      self.modules.nixos.tailscale
       self.nixosModules.hermesTailscale
     ];
 

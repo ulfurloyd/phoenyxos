@@ -6,14 +6,10 @@
       kitty
       vesktop
       nvim
-      git
-      lazygit
       zellij
-      languages
       kdeconnect
       k9s
       ssh
-      devenv
       yazi
       mo2-lint
       tealdeer
@@ -25,6 +21,10 @@
       self.modules.homeManager.bash
       self.modules.homeManager.zsh
       self.modules.homeManager.shell-aliases
+      self.modules.homeManager.git
+      self.modules.homeManager.lazygit
+      self.modules.homeManager.languages
+      self.modules.homeManager.devenv
     ];
 
     home.packages = with pkgs; [

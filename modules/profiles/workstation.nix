@@ -1,7 +1,7 @@
 { self, ... }: {
   flake.modules.nixos.workstation = { pkgs, ... }: {
     imports = with self.modules.nixos; [
-      myHomeManager
+      home-manager
       umbriel
       noctalia
       noctalia-greeter

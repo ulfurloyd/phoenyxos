@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.homeModules.emacs = { pkgs, ... }: {
+  flake.modules.homeManager.emacs = { pkgs, ... }: {
     imports = [
       inputs.nix-doom-emacs-unstraightened.homeModule
     ];

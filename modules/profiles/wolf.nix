@@ -12,7 +12,6 @@
       yazi
       mo2-lint
       tealdeer
-      emacs
       wlr-which-key
     ])
     ++ [
@@ -25,6 +24,7 @@
       self.modules.homeManager.languages
       self.modules.homeManager.devenv
       self.modules.homeManager.nvim
+      self.modules.homeManager.emacs
     ];
 
     home.packages = with pkgs; [

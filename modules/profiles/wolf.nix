@@ -22,6 +22,7 @@
       tealdeer
       emacs
       wlr-which-key
+      fastfetch
     ];
 
     home.packages = with pkgs; [

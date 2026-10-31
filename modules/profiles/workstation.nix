@@ -4,6 +4,7 @@
       myHomeManager
       umbriel
       noctalia
+      noctalia-greeter
       comin
       keyd
       fonts

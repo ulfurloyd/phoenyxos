@@ -2,7 +2,6 @@
   flake.modules.nixos.nyxConfiguration = { ... }: {
     imports = with self.modules.nixos; [
       nyxHardware
-      noctalia-greeter
       k3s
       nyxTailscale
     ];

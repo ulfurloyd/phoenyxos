@@ -2,7 +2,6 @@
   flake.modules.nixos.hermesConfiguration = { ... }: {
     imports = with self.modules.nixos; [
       hermesHardware
-      noctalia-greeter
       hermesTailscale
     ];
 

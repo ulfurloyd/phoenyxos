@@ -1,5 +1,5 @@
 { self, ... }: {
-  flake.nixosModules.hermesConfiguration = { pkgs, ... }: {
+  flake.modules.nixos.hermesConfiguration = { pkgs, ... }: {
     imports = with self.modules.nixos; [
       overlays
       hermesHardware

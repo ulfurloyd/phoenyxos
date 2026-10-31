@@ -1,5 +1,5 @@
 { self, ... }: {
-  flake.nixosModules.nyxConfiguration = { pkgs, ... }: {
+  flake.modules.nixos.nyxConfiguration = { pkgs, ... }: {
     imports = with self.modules.nixos; [
       overlays
       nyxHardware

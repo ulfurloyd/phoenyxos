@@ -6,6 +6,7 @@
 
     programs.mo2-lint = {
       enable = true;
+      nxmHandler.launcherService = true;
       settings = {
         instance = {
           launcher = "steam";

@@ -186,6 +186,10 @@
               variant = "destructive";
             }
           ];
+          window_switcher = {
+            mru = true;
+            style = "compact";
+          };
         };
         widget = {
           clock.format = "{:%H:%M:%S}";

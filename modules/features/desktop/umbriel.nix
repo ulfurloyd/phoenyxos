@@ -49,11 +49,7 @@
           "Mod+F" = "window-toggle-maximize";
           "Mod+M" = "window-toggle-fullscreen";
           "Mod+W" = "window-close";
-          "Mod+Shift+S" = "window-move-to-scratchpad";
           "Mod+Shift+Slash" = "cheatsheet-toggle";
-          "Mod+S" = "scratchpad-toggle";
-          "Mod+Ctrl+S" = "window-restore-from-scratchpad";
-          "Mod+Tab" = "scratchpad-focus-next";
           "Mod+Space" = "spawn:noctalia msg panel-toggle launcher";
           "Mod+O" = "overview-toggle";
           "Mod+E" = "spawn:emacsclient --create-frame";
@@ -127,6 +123,7 @@
           "Mod+F12" = "spawn:noctalia msg screenshot-region";
           "Mod+Shift+F12" = "spawn:noctalia msg screenshot-fullscreen";
           "Mod+Ctrl+F12" = "spawn:noctalia msg plugin noctalia/screen_recorder:service all toggle";
+          "Mod+Tab" = "spawn:noctalia msg window-switcher";
         };
 
         appearance = {

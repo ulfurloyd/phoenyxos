@@ -117,6 +117,24 @@
            "** TODO %?\n %U\n"))))
 #+end_src
 
+** Org Agenda
+#+begin_src emacs-lisp
+(after! org
+  (require 'org-agenda)
+
+  (add-to-list 'org-agenda-custom-commands
+               '("J" "Japanese learning"
+                 ((agenda ""
+                          ((org-agenda-span 7)
+                           (org-agenda-tag-filter-preset
+                            '("+japanese"))))
+                  (todo "TODO"
+                        ((org-agenda-overriding-header
+                          "Japanese milestones")
+                         (org-agenda-files
+                          (list (expand-file-name "japanese.org" org-directory)))))))))
+#+end_src
+
 * Noctalia Theme
 #+begin_src emacs-lisp
 (add-to-list 'custom-theme-load-path "~/.config/emacs/themes/")

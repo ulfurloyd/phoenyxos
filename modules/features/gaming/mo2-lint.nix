@@ -10,6 +10,7 @@
       settings = {
         instance = {
           launcher = "steam";
+          theme = "auto";
           folders.folder_name = "mo2-{game}";
         };
       };

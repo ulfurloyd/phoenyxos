@@ -369,11 +369,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1793547256,
-        "narHash": "sha256-5gbsl+/SLmYNSZDLrDZGZp2ZA3TkOKhT8Y0SttxgWTc=",
+        "lastModified": 1793610302,
+        "narHash": "sha256-FNrg33UU0NCCVyUyIFnXewN6Qv0McbHAW3sWAujobCY=",
         "owner": "ulfurloyd",
         "repo": "mo2-lint-flake",
-        "rev": "34c76c25e5c26f3e9574e05d168a3abfffffb0ae",
+        "rev": "a752f2f02c4241a93bac9dda558477db143017be",
         "type": "github"
       },
       "original": {

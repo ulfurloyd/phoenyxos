@@ -95,6 +95,7 @@
                      (list (expand-file-name "inbox.org" org-directory)
                            (expand-file-name "tasks.org" org-directory)
                            (expand-file-name "projects.org" org-directory)
+                           (expand-file-name "japanese.org" org-directory)
                            (expand-file-name "calendar.org" org-directory))
 
         org-agenda-start-on-weekday 1

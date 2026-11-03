@@ -36,7 +36,7 @@
 
  :tools
  (lsp +eglot)
- magit
+ (magit +forge)
  pdf
 
  :lang

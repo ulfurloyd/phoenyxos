@@ -2,10 +2,26 @@
 #+author: wolf
 #+startup: showeverything
 
+* Table of Contents :TOC:
+- [[#appearance][Appearance]]
+- [[#keybindings][Keybindings]]
+- [[#configuration][Configuration]]
+- [[#dired][Dired]]
+- [[#rainbow-mode][Rainbow Mode]]
+- [[#projectile-projects][Projectile Projects]]
+- [[#lsp][LSP]]
+  - [[#nixd][nixd]]
+- [[#org-mode][Org Mode]]
+  - [[#org-agenda][Org Agenda]]
+  - [[#table-of-contents][Table of Contents]]
+- [[#noctalia-theme][Noctalia Theme]]
+
 * Appearance
 #+begin_src emacs-lisp
 (setq doom-font (font-spec :family "FiraCode Nerd Font Mono" :size 16))
 (setq display-line-numbers-type 'relative)
+(add-to-list 'default-frame-alist '(alpha-background . 90))
+(set-frame-parameter nil 'alpha-background 75)
 #+end_src
 
 * Keybindings
@@ -46,6 +62,20 @@
 
 (after! vterm
   (setq vterm-shell (executable-find "zsh")))
+#+end_src
+
+* Dired
+#+begin_src emacs-lisp
+(after! dired
+  (map! :map dired-mode-map
+        :n "P" #'peep-dired
+        :n "C-c C-o" #'dired-open))
+#+end_src
+
+* Rainbow Mode
+#+begin_src emacs-lisp
+(use-package! rainbow-mode
+  :hook (prog-mode . rainbow-mode))
 #+end_src
 
 * Projectile Projects
@@ -133,6 +163,12 @@
                           "Japanese milestones")
                          (org-agenda-files
                           (list (expand-file-name "japanese.org" org-directory)))))))))
+#+end_src
+
+** Table of Contents
+#+begin_src emacs-lisp
+(use-package! toc-org
+  :hook (org-mode . toc-org-mode))
 #+end_src
 
 * Noctalia Theme

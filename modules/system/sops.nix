@@ -1,7 +1,12 @@
-{ inputs, ... }: {
+{ inputs, pkgs, ... }: {
   flake.modules.nixos.sops = { ... }: {
     imports = [
       inputs.sops-nix.nixosModules.sops
+    ];
+
+    environment.systemPackages = with pkgs; [
+      sops
+      age
     ];
 
     sops = {

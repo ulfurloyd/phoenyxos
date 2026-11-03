@@ -3,6 +3,7 @@
     imports = with self.modules.nixos; [
       hermesHardware
       hermesTailscale
+      sops
     ];
 
     # networking

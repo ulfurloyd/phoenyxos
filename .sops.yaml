@@ -1,0 +1,8 @@
+keys:
+  - &hermes age1kh3kxhgsqg26al6t8ynaffg7y08uqhesltkjrmg8jpwsn7najv0q0c90we
+
+creation_rules:
+  - path_regex: secrets/[^/]+$
+    key_groups:
+      - age:
+          - *hermes

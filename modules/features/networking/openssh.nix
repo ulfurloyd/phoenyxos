@@ -32,6 +32,13 @@
           User = "ubuntu";
         };
 
+        "github.com" = {
+          HostName = "github.com";
+          User = "git";
+          IdentityFile = "/run/secrets/github";
+          IdentitiesOnly = true;
+        };
+
         "*" = {
           ForwardAgent = false;
           AddKeysToAgent = "no";

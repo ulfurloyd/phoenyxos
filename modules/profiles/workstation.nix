@@ -16,6 +16,7 @@
       steam
       openssh
       tailscale
+      sops
     ];
 
     nix.settings.experimental-features = [

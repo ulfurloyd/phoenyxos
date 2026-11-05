@@ -8,6 +8,7 @@
           name = "ulfurloyd";
           email = "wolfinthedepths@proton.me";
         };
+        github.user = "ulfurloyd";
       };
     };
   };

@@ -11,11 +11,19 @@
 
     sops = {
       age.keyFile = "/home/wolf/.config/sops/age/keys.txt";
-      secrets.github = {
-        sopsFile = ../../secrets/github;
-        format = "binary";
-        owner = "wolf";
-        mode = "0400";
+      secrets = {
+        github = {
+          sopsFile = ../../secrets/github;
+          format = "binary";
+          owner = "wolf";
+          mode = "0400";
+        };
+        forge-authinfo = {
+          sopsFile = ../../secrets/forge-authinfo;
+          format = "binary";
+          owner = "wolf";
+          mode = "0400";
+        };
       };
     };
   };

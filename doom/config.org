@@ -62,6 +62,8 @@
 
 (after! vterm
   (setq vterm-shell (executable-find "zsh")))
+
+(setq auth-sources '("/run/secrets/forge-authinfo"))
 #+end_src
 
 * Dired

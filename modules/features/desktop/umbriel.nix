@@ -43,38 +43,38 @@
         };
 
         keybinds = {
-          "Mod+Return" = "spawn:kitty";
+          "Mod+Return" = "spawn kitty";
           "Mod+T" = "window-toggle-floating";
           "Mod+R" = "window-cycle-primary-extent";
           "Mod+F" = "window-toggle-maximize";
           "Mod+M" = "window-toggle-fullscreen";
           "Mod+W" = "window-close";
           "Mod+Shift+Slash" = "cheatsheet-toggle";
-          "Mod+Space" = "spawn:noctalia msg panel-toggle launcher";
+          "Mod+Space" = "spawn noctalia msg panel-toggle launcher";
           "Mod+O" = "overview-toggle";
-          "Mod+E" = "spawn:emacsclient --create-frame";
-          "Mod+B" = "spawn:wlr-which-key";
+          "Mod+E" = "spawn emacsclient --create-frame";
+          "Mod+B" = "spawn wlr-which-key";
 
-          "Mod+1" = "workspace-switch:1";
-          "Mod+2" = "workspace-switch:2";
-          "Mod+3" = "workspace-switch:3";
-          "Mod+4" = "workspace-switch:4";
-          "Mod+5" = "workspace-switch:5";
-          "Mod+6" = "workspace-switch:6";
-          "Mod+7" = "workspace-switch:7";
-          "Mod+8" = "workspace-switch:8";
-          "Mod+9" = "workspace-switch:9";
+          "Mod+1" = "workspace-switch 1";
+          "Mod+2" = "workspace-switch 2";
+          "Mod+3" = "workspace-switch 3";
+          "Mod+4" = "workspace-switch 4";
+          "Mod+5" = "workspace-switch 5";
+          "Mod+6" = "workspace-switch 6";
+          "Mod+7" = "workspace-switch 7";
+          "Mod+8" = "workspace-switch 8";
+          "Mod+9" = "workspace-switch 9";
           "Mod+U" = "workspace-next";
           "Mod+I" = "workspace-previous";
-          "Mod+Shift+1" = "window-move-to-workspace:1";
-          "Mod+Shift+2" = "window-move-to-workspace:2";
-          "Mod+Shift+3" = "window-move-to-workspace:3";
-          "Mod+Shift+4" = "window-move-to-workspace:4";
-          "Mod+Shift+5" = "window-move-to-workspace:5";
-          "Mod+Shift+6" = "window-move-to-workspace:6";
-          "Mod+Shift+7" = "window-move-to-workspace:7";
-          "Mod+Shift+8" = "window-move-to-workspace:8";
-          "Mod+Shift+9" = "window-move-to-workspace:9";
+          "Mod+Shift+1" = "window-move-to-workspace 1";
+          "Mod+Shift+2" = "window-move-to-workspace 2";
+          "Mod+Shift+3" = "window-move-to-workspace 3";
+          "Mod+Shift+4" = "window-move-to-workspace 4";
+          "Mod+Shift+5" = "window-move-to-workspace 5";
+          "Mod+Shift+6" = "window-move-to-workspace 6";
+          "Mod+Shift+7" = "window-move-to-workspace 7";
+          "Mod+Shift+8" = "window-move-to-workspace 8";
+          "Mod+Shift+9" = "window-move-to-workspace 9";
           "Mod+Shift+U" = "window-move-to-workspace-next";
           "Mod+Shift+I" = "window-move-to-workspace-previous";
           "Mod+Shift+H" = "column-move-left";
@@ -90,40 +90,40 @@
           "Mod+Ctrl+H" = "output-focus-left";
           "Mod+Ctrl+L" = "output-focus-right";
           "Mod+C" = "window-center";
-          "Mod+Shift+T" = "workspace-set-layout:toggle";
+          "Mod+Shift+T" = "workspace-set-layout toggle";
           "Mod+Ctrl+I" = "workspace-move-up";
           "Mod+Ctrl+U" = "workspace-move-down";
 
           # media controls
-          "XF86AudioLowerVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-";
-          "XF86AudioRaiseVolume" = "spawn:wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0";
-          "XF86AudioMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-          "XF86AudioMicMute" = "spawn:wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+          "XF86AudioLowerVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-";
+          "XF86AudioRaiseVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0";
+          "XF86AudioMute" = "spawn wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+          "XF86AudioMicMute" = "spawn wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
 
-          "XF86AudioPlay" = "spawn:noctalia msg media toggle";
-          "XF86AudioStop" = "spawn:noctalia msg media stop";
-          "XF86AudioPrev" = "spawn:noctalia msg media previous";
-          "XF86AudioNext" = "spawn:noctalia msg media next";
+          "XF86AudioPlay" = "spawn noctalia msg media toggle";
+          "XF86AudioStop" = "spawn noctalia msg media stop";
+          "XF86AudioPrev" = "spawn noctalia msg media previous";
+          "XF86AudioNext" = "spawn noctalia msg media next";
 
           # screen brightness
-          "XF86MonBrightnessUp" = "spawn:noctalia msg brightness-up";
-          "XF86MonBrightnessDown" = "spawn:noctalia msg brightness-down";
+          "XF86MonBrightnessUp" = "spawn noctalia msg brightness-up";
+          "XF86MonBrightnessDown" = "spawn noctalia msg brightness-down";
 
           # noctalia
-          "Mod+Alt+S" = "spawn:noctalia msg settings-toggle";
-          "Mod+D" = "spawn:noctalia msg panel-toggle control-center";
-          "Mod+N" = "spawn:noctalia msg panel-toggle control-center notifications";
-          "Mod+A" = "spawn:noctalia msg panel-toggle noctalia/umbriel-companion:panel";
-          "Mod+Ctrl+W" = "spawn:noctalia msg panel-toggle wallpaper";
-          "Mod+Ctrl+N" = "spawn:noctalia msg notification-dnd-toggle";
-          "Mod+Ctrl+C" = "spawn:noctalia msg panel-toggle clipboard";
-          "Mod+Ctrl+Shift+W" = "spawn:noctalia msg panel-toggle noctalia/wallhaven:browser";
-          "Mod+Ctrl+M" = "spawn:noctalia msg panel-toggle control-center media";
-          "Mod+P" = "spawn:noctalia msg panel-toggle session";
-          "Mod+F12" = "spawn:noctalia msg screenshot-region";
-          "Mod+Shift+F12" = "spawn:noctalia msg screenshot-fullscreen";
-          "Mod+Ctrl+F12" = "spawn:noctalia msg plugin noctalia/screen_recorder:service all toggle";
-          "Mod+Tab" = "spawn:noctalia msg window-switcher";
+          "Mod+Alt+S" = "spawn noctalia msg settings-toggle";
+          "Mod+D" = "spawn noctalia msg panel-toggle control-center";
+          "Mod+N" = "spawn noctalia msg panel-toggle control-center notifications";
+          "Mod+A" = "spawn noctalia msg panel-toggle noctalia/umbriel-companion:panel";
+          "Mod+Ctrl+W" = "spawn noctalia msg panel-toggle wallpaper";
+          "Mod+Ctrl+N" = "spawn noctalia msg notification-dnd-toggle";
+          "Mod+Ctrl+C" = "spawn noctalia msg panel-toggle clipboard";
+          "Mod+Ctrl+Shift+W" = "spawn noctalia msg panel-toggle noctalia/wallhaven:browser";
+          "Mod+Ctrl+M" = "spawn noctalia msg panel-toggle control-center media";
+          "Mod+P" = "spawn noctalia msg panel-toggle session";
+          "Mod+F12" = "spawn noctalia msg screenshot-region";
+          "Mod+Shift+F12" = "spawn noctalia msg screenshot-fullscreen";
+          "Mod+Ctrl+F12" = "spawn noctalia msg plugin noctalia/screen_recorder:service all toggle";
+          "Mod+Tab" = "spawn noctalia msg window-switcher";
         };
 
         appearance = {

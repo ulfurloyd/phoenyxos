@@ -48,6 +48,14 @@
 (map! :leader
       :desc "Evaluate selection"
       "e v" #'eval-region)
+(map! :n
+      "-" #'grease-here)
+(after! evil
+    (evil-define-key 'normal 'global
+      (kbd "\\") #'+treemacs/toggle))
+(after! treemacs-evil
+    (define-key evil-treemacs-state-map
+      (kbd "\\") #'+treemacs/toggle))
 #+end_src
 
 * Configuration

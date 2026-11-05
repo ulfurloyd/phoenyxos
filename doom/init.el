@@ -10,6 +10,7 @@
  modeline
  ophints
  (popup +defaults)
+ treemacs
  vc-gutter
  vi-tilde-fringe
  workspaces

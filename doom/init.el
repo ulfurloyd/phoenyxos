@@ -38,6 +38,7 @@
  (lsp +eglot)
  (magit +forge)
  pdf
+ direnv
 
  :lang
  emacs-lisp

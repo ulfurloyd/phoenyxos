@@ -10,6 +10,7 @@
       tangleArgs = "--all config.org";
 
       extraBinPackages = with pkgs; [
+        direnv
         nixd
         nixfmt
         yaml-language-server

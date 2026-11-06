@@ -7,7 +7,7 @@
     programs.umbriel.enable = true;
   };
 
-  flake.modules.homeManager.umbriel = {
+  flake.modules.homeManager.umbriel = { config, ... }: {
     imports = [
       inputs.umbriel.homeModules.default
     ];
@@ -23,6 +23,7 @@
           ];
           mod_key = "Super";
           xwayland = true;
+          xwayland_xsettings = true;
           show_cheatsheet = false;
           focus_on_activate = false;
           honor_restored_maximize = false;
@@ -166,7 +167,8 @@
           };
 
           cursor = {
-            size = 24;
+            theme = config.home.pointerCursor.name;
+            size = config.home.pointerCursor.size;
             follows_focus = true;
             hardware_cursor = true;
             hide_when_typing = false;

@@ -1,5 +1,5 @@
 { self, ... }: {
-  flake.modules.homeManager.wolf = { pkgs, ... }: {
+  flake.modules.homeManager.wolf = { pkgs, config, ... }: {
     imports = with self.modules.homeManager; [
       noctalia-desktop
       fastfetch
@@ -37,6 +37,22 @@
       feishin
       jq
     ];
+
+    home.pointerCursor = {
+      enable = true;
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Classic";
+      size = 24;
+      gtk.enable = true;
+      x11.enable = true;
+    };
+
+    dconf.settings = {
+      "org/gnome/desktop/interface" = {
+        cursor-theme = config.home.pointerCursor.name;
+        cursor-size = config.home.pointerCursor.size;
+      };
+    };
 
     programs.btop.enable = true;
 

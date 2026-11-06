@@ -14,6 +14,8 @@
         nixd
         nixfmt
         yaml-language-server
+        go
+        gopls
       ];
     };
 

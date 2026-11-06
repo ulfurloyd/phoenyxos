@@ -11,6 +11,7 @@
 - [[#projectile-projects][Projectile Projects]]
 - [[#lsp][LSP]]
   - [[#nixd][nixd]]
+  - [[#go][go]]
 - [[#org-mode][Org Mode]]
   - [[#org-agenda][Org Agenda]]
   - [[#table-of-contents][Table of Contents]]
@@ -123,6 +124,18 @@
         (:expr "(builtins.getFlake \"/home/wolf/Projects/phoenyxos\").debug.options")
         :flake_parts_persystem
         (:expr "(builtins.getFlake \"/home/wolf/Projects/phoenyxos\").currentSystem.options"))))))
+#+end_src
+** go
+#+begin_src emacs-lisp
+(after! go
+  (defun wolf/go-before-save ()
+    (call-interactively #'eglot-code-action-organize-imports)
+    (eglot-format-buffer))
+
+  (add-hook 'go-mode-hook
+            (lambda ()
+              (add-hook 'before-save-hook
+                        #'wolf/go-before-save nil t))))
 #+end_src
 
 * Org Mode

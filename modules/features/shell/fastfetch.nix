@@ -74,7 +74,7 @@
             key = "• {#39} colors  {#keys}•";
             type = "colors";
             symbol = "circle";
-          }   
+          }
           {
             key = "•••••••••••••";
             type = "custom";

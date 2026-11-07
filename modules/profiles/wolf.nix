@@ -36,6 +36,7 @@
       glib
       feishin
       jq
+      heroic
     ];
 
     home.pointerCursor = {

@@ -44,7 +44,7 @@
         };
 
         keybinds = {
-          "Mod+Return" = "spawn kitty";
+          "Mod+Return" = "spawn footclient";
           "Mod+T" = "window-toggle-floating";
           "Mod+R" = "window-cycle-primary-extent";
           "Mod+F" = "window-toggle-maximize";

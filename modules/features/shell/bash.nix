@@ -41,6 +41,7 @@
         enable flyline 2>/dev/null
 
         flyline history --backend flyline
+        flyline set-cursor --backend flyline
         flyline key bind Ctrl+f inlineSuggestionAvailable=inlineSuggestionAccept
         flyline key bind Ctrl+n always=nextHistoryEntry
         flyline key bind Ctrl+p always=prevHistoryEntry

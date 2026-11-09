@@ -13,6 +13,7 @@
       nvim
       emacs
       kitty
+      foot
       zellij
       yazi
       tealdeer

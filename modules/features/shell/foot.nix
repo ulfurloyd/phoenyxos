@@ -17,8 +17,6 @@
           alpha-mode = "all";
         };
         key-bindings = {
-          spawn-terminal = "Alt+Return";
-          quit = "Alt+w";
           scrollback-up-line = "Control+Shift+k";
           scrollback-down-line = "Control+Shift+j";
         };

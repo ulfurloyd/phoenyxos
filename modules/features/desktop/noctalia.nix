@@ -71,6 +71,7 @@
             builtin_ids = [
               "btop"
               "emacs"
+              "foot"
               "gtk3"
               "gtk4"
               "kcolorscheme"

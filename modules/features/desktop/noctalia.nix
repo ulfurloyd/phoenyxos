@@ -195,7 +195,15 @@
         widget = {
           clock.format = "{:%H:%M:%S}";
           notifications.capsule = false;
-          workspaces.show_labels = false;
+          workspaces = {
+            font_scale = 1.25;
+            hide_when_empty = true;
+            label_source = "name";
+            max_label_chars = 1;
+            show_labels = true;
+            show_tooltip = false;
+            style = "minimal";
+          };
           weather.show_condition = false;
           phone-connect.type = "icefish/phone-connect:bar";
           umbriel-companion.type = "noctalia/umbriel-companion:bar";

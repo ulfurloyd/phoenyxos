@@ -1,4 +1,18 @@
-{ inputs, ... }: {
+{ inputs, ... }:
+let
+  workspaces = [
+    "一"
+    "二"
+    "三"
+    "四"
+    "五"
+    "六"
+    "七"
+    "八"
+    "九"
+  ];
+in
+{
   flake.modules.nixos.umbriel = {
     imports = [
       inputs.umbriel.nixosModules.default
@@ -27,6 +41,12 @@
           show_cheatsheet = false;
           focus_on_activate = false;
           honor_restored_maximize = false;
+        };
+
+        output = {
+          "eDP-1".workspaces = workspaces;
+          "DP-1".workspaces = workspaces;
+          "HDMI-A-1".workspaces = workspaces;
         };
 
         layout = {

@@ -21,7 +21,7 @@
 
     noctalia.url = "github:noctalia-dev/noctalia";
     umbriel.url = "github:noctalia-dev/umbriel";
-
+    phoenyx-wallpapers.url = "github:ulfurloyd/phoenyx-wallpapers";
     helium = {
       url = "github:schembriaiden/helium-browser-nix-flake";
       inputs.nixpkgs.follows = "nixpkgs";

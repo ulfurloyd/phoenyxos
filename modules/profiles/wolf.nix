@@ -2,6 +2,7 @@
   flake.modules.homeManager.wolf = { pkgs, config, ... }: {
     imports = with self.modules.homeManager; [
       noctalia-desktop
+      phoenyx-wallpapers
       fastfetch
       bash
       zsh

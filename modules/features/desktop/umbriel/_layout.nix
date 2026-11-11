@@ -1,0 +1,15 @@
+{
+  programs.umbriel.settings.layout = {
+    mode = "scrolling";
+    gap = 10;
+    extent_presets = [
+      0.333
+      0.5
+      0.667
+    ];
+    scrolling = {
+      default_extent_fraction = 0.5;
+      center_underfull_strip = true;
+    };
+  };
+}

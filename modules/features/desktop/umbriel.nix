@@ -114,6 +114,8 @@ in
           "Mod+Shift+T" = "workspace-set-layout toggle";
           "Mod+Ctrl+I" = "workspace-move-up";
           "Mod+Ctrl+U" = "workspace-move-down";
+          "Mod+BracketLeft" = "window-consume-or-expel-left";
+          "Mod+BracketRight" = "window-consume-or-expel-right";
 
           # media controls
           "XF86AudioLowerVolume" = "spawn wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-";

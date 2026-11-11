@@ -29,7 +29,13 @@
           ];
           width = 900;
         };
-        dock.enabled = false;
+        dock = {
+          enabled = true;
+          auto_hide = true;
+          icon_size = 40;
+          launcher_position = "end";
+          reserve_space = false;
+        };
         wallpaper.directory = "/home/wolf/Wallpapers";
         keybinds = {
           cancel = [
@@ -217,6 +223,26 @@
             type = "tmelik/system-monitor:summary";
           };
         };
+        lockscreen_widgets = {
+          enabled = true;
+          widget.lockscreen-widget-0000000000000001 = {
+            box_height = 144.0;
+            box_width = 352.0;
+            cx = 960.0;
+            cy = 636.0;
+            placement_height = 1080.0;
+            placement_width = 1920.0;
+            rotation = 0.0;
+            type = "label";
+            settings = {
+              background_opacity = 0.0;
+              background_padding = 10;
+              background_radius = 12;
+              shadow = true;
+              title = "不死鳥";
+            };
+          };
+        };
         plugins = {
           enabled = [
             "noctalia/translator"
@@ -237,6 +263,7 @@
           "mindnbytes/nix-status" = {
             flake_dir = "/home/wolf/Projects/phoenyxos";
             nixos_configuration = "nyx";
+            "noctalia/wallhaven".download_dir = "/home/wolf/Projects/phoenyx-wallpapers/wallpapers";
           };
         };
       };

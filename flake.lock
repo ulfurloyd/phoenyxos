@@ -721,11 +721,11 @@
         "nixpkgs": "nixpkgs_8"
       },
       "locked": {
-        "lastModified": 1794396487,
-        "narHash": "sha256-0kgeVc1NgDuMAxzHlsPkGZFIqlHwHVdZO5XncdUA3jw=",
+        "lastModified": 1794412091,
+        "narHash": "sha256-oZlA8U31jHe+X+1jzqj0gIppHVtBS5IOE8oiQpMq/yY=",
         "owner": "ulfurloyd",
         "repo": "phoenyx-wallpapers",
-        "rev": "f99b0d08646780093aaf4764eb3770cb943c5e00",
+        "rev": "f8169ad6ee3a6d239a28266ba48d0e87ddbb8478",
         "type": "github"
       },
       "original": {

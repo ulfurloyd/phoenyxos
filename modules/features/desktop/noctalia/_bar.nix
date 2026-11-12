@@ -13,7 +13,7 @@
         "weather"
         "volume"
       ];
-      
+
       center = [
         "sys-summary"
       ];

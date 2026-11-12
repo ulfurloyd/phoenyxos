@@ -1,16 +1,21 @@
 { ... }: {
-  flake.modules.nixos.noctalia-greeter = { pkgs, ... }: {
-    services.displayManager.noctalia-greeter = {
-      enable = true;
-      settings = {
-        cursor.size = 24;
-        keyboard.layout = "us";
+  flake.modules.nixos.noctalia-greeter =
+    { pkgs, ... }:
+    let
+      cursor = import ../_values/cursor.nix { inherit pkgs; };
+    in
+    {
+      services.displayManager.noctalia-greeter = {
+        enable = true;
+        settings = {
+          cursor.size = cursor.size;
+          keyboard.layout = "us";
+        };
+        cursorTheme = {
+          package = cursor.package;
+          name = cursor.name;
+        };
+        passwordlessSyncUsers = [ "wolf" ];
       };
-      cursorTheme = {
-        package = pkgs.bibata-cursors;
-        name = "Bibata-Modern-Ice";
-      };
-      passwordlessSyncUsers = [ "wolf" ];
     };
-  };
 }

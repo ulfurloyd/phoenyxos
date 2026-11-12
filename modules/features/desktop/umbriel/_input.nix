@@ -1,5 +1,8 @@
-{ config, ... }: {
-  programs.umbriel.settings.input = {
+{ pkgs, ... }: {
+  programs.umbriel.settings.input =
+    let
+      cursor = import ../../../_values/cursor.nix { inherit pkgs; };
+    in {
     keyboard.repeat_rate = 25;
     keyboard.repeat_delay = 600;
 
@@ -14,8 +17,8 @@
     };
 
     cursor = {
-      theme = config.home.pointerCursor.name;
-      size = config.home.pointerCursor.size;
+      theme = cursor.name;
+      size = cursor.size;
       follows_focus = true;
       hardware_cursor = true;
       hide_when_typing = false;

@@ -11,47 +11,52 @@
     };
   };
 
-  flake.modules.homeManager.ssh = { ... }: {
-    programs.ssh = {
-      enable = true;
-      enableDefaultConfig = false;
+  flake.modules.homeManager.ssh =
+    { ... }:
+    let
+      user = import ../../_values/user.nix;
+    in
+    {
+      programs.ssh = {
+        enable = true;
+        enableDefaultConfig = false;
 
-      settings = {
-        nyx = {
-          HostName = "192.168.0.5";
-          User = "wolf";
-        };
+        settings = {
+          nyx = {
+            HostName = "192.168.0.5";
+            User = user.username;
+          };
 
-        hermes = {
-          HostName = "192.168.0.14";
-          User = "wolf";
-        };
+          hermes = {
+            HostName = "192.168.0.14";
+            User = user.username;
+          };
 
-        vnic = {
-          HostName = "100.72.76.103";
-          User = "ubuntu";
-        };
+          vnic = {
+            HostName = "100.72.76.103";
+            User = "ubuntu";
+          };
 
-        "github.com" = {
-          HostName = "github.com";
-          User = "git";
-          IdentityFile = "/run/secrets/github";
-          IdentitiesOnly = true;
-        };
+          "github.com" = {
+            HostName = "github.com";
+            User = "git";
+            IdentityFile = "/run/secrets/github";
+            IdentitiesOnly = true;
+          };
 
-        "*" = {
-          ForwardAgent = false;
-          AddKeysToAgent = "no";
-          Compression = false;
-          ServerAliveInterval = 0;
-          ServerAliveCountMax = 3;
-          HashKnownHosts = false;
-          UserKnownHostsFile = "~/.ssh/known_hosts";
-          ControlMaster = "no";
-          ControlPath = "~/.ssh/master-%r@%n:%p";
-          ControlPersist = "no";
+          "*" = {
+            ForwardAgent = false;
+            AddKeysToAgent = "no";
+            Compression = false;
+            ServerAliveInterval = 0;
+            ServerAliveCountMax = 3;
+            HashKnownHosts = false;
+            UserKnownHostsFile = "~/.ssh/known_hosts";
+            ControlMaster = "no";
+            ControlPath = "~/.ssh/master-%r@%n:%p";
+            ControlPersist = "no";
+          };
         };
       };
     };
-  };
 }

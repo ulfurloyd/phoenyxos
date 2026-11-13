@@ -1,8 +1,10 @@
 { self, ... }: {
-  flake.modules.homeManager.wolf = { pkgs, ... }:
+  flake.modules.homeManager.wolf =
+    { pkgs, ... }:
     let
       cursor = import ../_values/cursor.nix { inherit pkgs; };
-    in {
+    in
+    {
       imports = with self.modules.homeManager; [
         noctalia-desktop
         phoenyx-wallpapers

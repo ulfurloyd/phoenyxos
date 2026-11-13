@@ -3,6 +3,7 @@
     { pkgs, ... }:
     let
       cursor = import ../_values/cursor.nix { inherit pkgs; };
+      user = import ../_values/user.nix;
     in
     {
       services.displayManager.noctalia-greeter = {
@@ -15,7 +16,7 @@
           package = cursor.package;
           name = cursor.name;
         };
-        passwordlessSyncUsers = [ "wolf" ];
+        passwordlessSyncUsers = [ user.username ];
       };
     };
 }

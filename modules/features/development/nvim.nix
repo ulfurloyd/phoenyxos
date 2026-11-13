@@ -3,6 +3,7 @@
     { pkgs, osConfig, ... }:
     let
       host = osConfig.networking.hostName;
+      user = import ../../_values/user.nix;
     in
     {
       imports = [
@@ -259,12 +260,12 @@
             servers.nixd = {
               filetypes = [ "nix" ];
               settings.nixd = {
-                nixpkgs.expr = ''import (builtins.getFlake "/home/wolf/Projects/phoenyxos").inputs.nixpkgs { }'';
+                nixpkgs.expr = ''import (builtins.getFlake "${user.flakeDirectory}").inputs.nixpkgs { }'';
                 options = {
-                  nixos.expr = ''(builtins.getFlake "/home/wolf/Projects/phoenyxos").nixosConfigurations.${host}.options'';
-                  home_manager.expr = ''(builtins.getFlake "/home/wolf/Projects/phoenyxos").nixosConfigurations.${host}.options.home-manager.users.type.getSubOptions []'';
-                  flake_parts.expr = ''(builtins.getFlake "/home/wolf/Projects/phoenyxos").debug.options'';
-                  flake_parts_persystem.expr = ''(builtins.getFlake "/home/wolf/Projects/phoenyxos").currentSystem.options'';
+                  nixos.expr = ''(builtins.getFlake "${user.flakeDirectory}").nixosConfigurations.${host}.options'';
+                  home_manager.expr = ''(builtins.getFlake "${user.flakeDirectory}").nixosConfigurations.${host}.options.home-manager.users.type.getSubOptions []'';
+                  flake_parts.expr = ''(builtins.getFlake "${user.flakeDirectory}").debug.options'';
+                  flake_parts_persystem.expr = ''(builtins.getFlake "${user.flakeDirectory}").currentSystem.options'';
                 };
               };
             };

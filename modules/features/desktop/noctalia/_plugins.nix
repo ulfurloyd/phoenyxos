@@ -22,7 +22,7 @@ in
     "mindnbytes/nix-status" = {
       flake_dir = "/home/wolf/Projects/phoenyxos";
       nixos_configuration = "nyx";
-      "noctalia/wallhaven".download_dir = "${user.homeDirectory}/Projects/phoenyx-wallpapers/wallpapers";
     };
+    "noctalia/wallhaven".download_dir = "${user.homeDirectory}/Projects/phoenyx-wallpapers/wallpapers";
   };
 }

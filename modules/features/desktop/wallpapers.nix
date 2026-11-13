@@ -1,13 +1,18 @@
 { inputs, ... }: {
-  flake.modules.homeManager.phoenyx-wallpapers = { config, ... }: {
-    imports = [
-      inputs.phoenyx-wallpapers.homeManagerModules.default
-    ];
+  flake.modules.homeManager.phoenyx-wallpapers =
+    { ... }:
+    let
+      user = import ../../_values/user.nix;
+    in
+    {
+      imports = [
+        inputs.phoenyx-wallpapers.homeManagerModules.default
+      ];
 
-    services.phoenyx-wallpapers = {
-      enable = true;
-      package = inputs.phoenyx-wallpapers.packages.x86_64-linux.default;
-      directory = "${config.home.homeDirectory}/Wallpapers";
+      services.phoenyx-wallpapers = {
+        enable = true;
+        package = inputs.phoenyx-wallpapers.packages.x86_64-linux.default;
+        directory = "${user.homeDirectory}/Wallpapers";
+      };
     };
-  };
 }

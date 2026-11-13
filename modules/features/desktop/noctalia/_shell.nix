@@ -2,9 +2,10 @@
   programs.noctalia.settings.shell =
     let
       fonts = import ../../../_values/fonts.nix { inherit pkgs; };
+      user = import ../../../_values/user.nix;
     in
     {
-      avatar_path = "/home/wolf/Pictures/pfp/Midra.jpg";
+      avatar_path = "${user.homeDirectory}/Pictures/pfp/Midra.jpg";
       font_family = fonts.sans.name;
       umbriel_overview_type_to_launch_enabled = true;
       greeter_sync.auto_sync = true;
@@ -13,7 +14,7 @@
       telemetry_enabled = false;
 
       screenshot = {
-        directory = "/home/wolf/Pictures/Screenshots";
+        directory = "${user.homeDirectory}/Pictures/Screenshots";
         filename_pattern = "%Y_%m-%d_%H:%M:%S";
         confirm_region = true;
       };

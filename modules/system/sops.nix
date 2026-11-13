@@ -15,7 +15,7 @@
       ];
 
       sops = {
-        age.keyFile = "/home/wolf/.config/sops/age/keys.txt";
+        age.keyFile = "${user.homeDirectory}/.config/sops/age/keys.txt";
         secrets = {
           github = {
             sopsFile = ../../secrets/github;

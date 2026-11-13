@@ -5,6 +5,7 @@
       beetsWithLyrics = pkgs.python3.pkgs.beets.override (prev: {
         pluginOverrides.lyrics.enable = true;
       });
+      user = import ../../_values/user.nix;
     in
     {
       programs.beets = {
@@ -12,8 +13,8 @@
         package = beetsWithLyrics;
 
         settings = {
-          directory = "/home/wolf/Music";
-          library = "/home/wolf/.local/share/beets/library.db";
+          directory = "${user.homeDirectory}/Music";
+          library = "${user.homeDirectory}/.local/share/beets/library.db";
 
           plugins = [ "lyrics" ];
 

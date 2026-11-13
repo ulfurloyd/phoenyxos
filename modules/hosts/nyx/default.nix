@@ -5,6 +5,7 @@
       workstation
       nvidia
       openmw
+      aagl
     ];
   };
 }

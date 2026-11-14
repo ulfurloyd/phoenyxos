@@ -17,8 +17,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
-
     noctalia.url = "github:noctalia-dev/noctalia";
     umbriel.url = "github:noctalia-dev/umbriel";
     phoenyx-wallpapers.url = "github:ulfurloyd/phoenyx-wallpapers";

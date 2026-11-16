@@ -9,6 +9,7 @@
         nyxHardware
         k3s
         nyxTailscale
+        tmpfiles
       ];
 
       # boot

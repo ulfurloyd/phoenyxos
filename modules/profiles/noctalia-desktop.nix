@@ -10,6 +10,7 @@
     imports = with self.modules.homeManager; [
       umbriel
       noctalia
+      luciole
     ];
   };
 }

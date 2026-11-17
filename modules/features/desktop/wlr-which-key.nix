@@ -22,20 +22,19 @@
 
           menu = [
             {
-              key = "a";
-              desc = "applications";
-              submenu = [
-                {
-                  key = "b";
-                  desc = "browser";
-                  cmd = "helium";
-                }
-                {
-                  key = "m";
-                  desc = "music";
-                  cmd = "feishin";
-                }
-              ];
+              key = "b";
+              desc = "browser";
+              cmd = "helium";
+            }
+            {
+              key = "f";
+              desc = "files";
+              cmd = "luciole";
+            }
+            {
+              key = "m";
+              desc = "music";
+              cmd = "feishin";
             }
           ];
         };

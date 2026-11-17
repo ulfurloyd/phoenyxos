@@ -14,6 +14,7 @@
     imports = [
       ./_general.nix
       ./_appearance.nix
+      ./_input.nix
     ];
   };
 }

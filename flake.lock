@@ -60,29 +60,6 @@
         "type": "github"
       }
     },
-    "dms": {
-      "inputs": {
-        "dank-qml-common": "dank-qml-common",
-        "flake-compat": "flake-compat_3",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1794152448,
-        "narHash": "sha256-D8Ps69xp345EKBDqgznn5kDeb2UEOtNX5+wChMKGBDo=",
-        "owner": "duxlabs-dev",
-        "repo": "dux-shell",
-        "rev": "43255a46ea01e9d0de1fe8ce9897c0d71566b2a8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "duxlabs-dev",
-        "ref": "stable",
-        "repo": "dux-shell",
-        "type": "github"
-      }
-    },
     "doomdir": {
       "flake": false,
       "locked": {
@@ -124,6 +101,29 @@
       "original": {
         "owner": "doomemacs",
         "repo": "modules",
+        "type": "github"
+      }
+    },
+    "dux": {
+      "inputs": {
+        "dank-qml-common": "dank-qml-common",
+        "flake-compat": "flake-compat_3",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794152448,
+        "narHash": "sha256-D8Ps69xp345EKBDqgznn5kDeb2UEOtNX5+wChMKGBDo=",
+        "owner": "duxlabs-dev",
+        "repo": "dux-shell",
+        "rev": "43255a46ea01e9d0de1fe8ce9897c0d71566b2a8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "duxlabs-dev",
+        "ref": "stable",
+        "repo": "dux-shell",
         "type": "github"
       }
     },
@@ -836,7 +836,7 @@
       "inputs": {
         "aagl": "aagl",
         "comin": "comin",
-        "dms": "dms",
+        "dux": "dux",
         "flake-parts": "flake-parts",
         "flyline": "flyline",
         "helium": "helium",

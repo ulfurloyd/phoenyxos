@@ -30,7 +30,7 @@
       url = "github:sodiboo/niri-flake?ref=pull/1853/head";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    dms = {
+    dux = {
       url = "github:duxlabs-dev/dux-shell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
     };

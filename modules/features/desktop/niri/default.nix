@@ -9,4 +9,10 @@
       package = pkgs.niri-unstable;
     };
   };
+
+  flake.modules.homeManager.niri = { ... }: {
+    imports = [
+      ./_general.nix
+    ];
+  };
 }

@@ -7,6 +7,8 @@
     {
       imports = with self.modules.homeManager; [
         noctalia-desktop
+        niri
+        dux
         phoenyx-wallpapers
         fastfetch
         bash

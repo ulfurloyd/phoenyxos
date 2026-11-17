@@ -26,7 +26,9 @@
         hide_timeout_ms = 0;
       };
 
-      focus.follows_mouse = true;
-      focus.follows_mouse_max_scroll = 0.5;
+      focus = {
+        follows_mouse = "always";
+        follows_mouse_max_scroll = 0.5;
+      };
     };
 }

@@ -13,6 +13,7 @@
   flake.modules.homeManager.niri = { ... }: {
     imports = [
       ./_general.nix
+      ./_appearance.nix
     ];
   };
 }

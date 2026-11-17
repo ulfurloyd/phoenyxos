@@ -26,6 +26,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    niri = {
+      url = "github:sodiboo/niri-flake?ref=pull/1853/head";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    dms = {
+      url = "github:duxlabs-dev/dux-shell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     flyline.url = "github:HalFrgrd/flyline";
 
     nvf.url = "github:notashelf/nvf";

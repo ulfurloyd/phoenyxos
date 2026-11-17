@@ -9,6 +9,7 @@
         home-manager
         noctalia-desktop
         noctalia-greeter
+        niri
         comin
         keyd
         fonts

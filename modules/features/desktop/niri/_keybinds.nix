@@ -101,5 +101,42 @@
     "XF86MonBrightnessDown".action.spawn = [
       "dms" "ipc" "call" "brightness" "decrement" "5" ""
     ];
+
+    # Dux Shell
+    "Mod+Space".action.spawn = [
+      "dms" "ipc" "call" "spotlight" "toggle"
+    ];
+    "Mod+Alt+S".action.spawn = [
+      "dms" "ipc" "call" "settings" "toggle"
+    ];
+    "Mod+D".action.spawn = [
+      "dms" "ipc" "call" "control-center" "toggle"
+    ];
+    "Mod+N".action.spawn = [
+      "dms" "ipc" "call" "notifications" "toggle"
+    ];
+    "Mod+Ctrl+N".action.spawn = [
+      "dms" "ipc" "call" "notifications" "toggleDoNotDisturb"
+    ];
+    "Mod+Ctrl+W".action.spawn = [
+      "dms" "ipc" "call" "dash" "toggle" "wallpaper"
+    ];
+    "Mod+Ctrl+C".action.spawn = [
+      "dms" "ipc" "call" "clipboard" "toggle"
+    ];
+    "Mod+Ctrl+M".action.spawn = [
+      "dms" "ipc" "call" "dash" "toggle" "media"
+    ];
+    "Mod+P".action.spawn = [
+      "dms" "ipc" "call" "powermenu" "toggle"
+    ];
+
+    # Screenshots
+    "Mod+F12".action.spawn = [
+      "dms" "ipc" "call" "niri" "screenshot"
+    ];
+    "Mod+Shift+F12".action.spawn = [
+      "dms" "ipc" "call" "niri" "screenshotScreen"
+    ];
   };
 }

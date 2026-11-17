@@ -49,5 +49,21 @@
 
     "Mod+Shift+U".action.move-window-to-workspace-down = [];
     "Mod+Shift+I".action.move-window-to-workspace-up = [];
+    # 
+    # Output navigation
+    "Mod+Ctrl+H".action.focus-monitor-left = [];
+    "Mod+Ctrl+L".action.focus-monitor-right = [];
+
+    "Mod+Ctrl+Shift+H".action.move-window-to-monitor-left = [];
+    "Mod+Ctrl+Shift+L".action.move-window-to-monitor-right = [];
+
+    # Window positioning
+    "Mod+C".action.center-column = [];
+    "Mod+BracketLeft".action.consume-or-expel-window-left = [];
+    "Mod+BracketRight".action.consume-or-expel-window-right = [];
+
+    # Workspace positioning
+    "Mod+Ctrl+I".action.move-workspace-up = [];
+    "Mod+Ctrl+U".action.move-workspace-down = [];
   };
 }

@@ -65,5 +65,41 @@
     # Workspace positioning
     "Mod+Ctrl+I".action.move-workspace-up = [];
     "Mod+Ctrl+U".action.move-workspace-down = [];
+
+    # Volume
+    "XF86AudioLowerVolume".action.spawn = [
+      "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"
+    ];
+    "XF86AudioRaiseVolume".action.spawn = [
+      "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+" "-l" "1.0"
+    ];
+    "XF86AudioMute".action.spawn = [
+      "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"
+    ];
+    "XF86AudioMicMute".action.spawn = [
+      "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"
+    ];
+
+    # Media
+    "XF86AudioPlay".action.spawn = [
+      "dms" "ipc" "call" "mpris" "playPause"
+    ];
+    "XF86AudioStop".action.spawn = [
+      "dms" "ipc" "call" "mpris" "stop"
+    ];
+    "XF86AudioPrev".action.spawn = [
+      "dms" "ipc" "call" "mpris" "previous"
+    ];
+    "XF86AudioNext".action.spawn = [
+      "dms" "ipc" "call" "mpris" "next"
+    ];
+
+    # Brightness
+    "XF86MonBrightnessUp".action.spawn = [
+      "dms" "ipc" "call" "brightness" "increment" "5" ""
+    ];
+    "XF86MonBrightnessDown".action.spawn = [
+      "dms" "ipc" "call" "brightness" "decrement" "5" ""
+    ];
   };
 }

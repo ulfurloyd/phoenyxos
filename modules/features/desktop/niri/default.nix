@@ -16,6 +16,7 @@
       ./_appearance.nix
       ./_input.nix
       ./_keybinds.nix
+      ./_layout.nix
     ];
   };
 }

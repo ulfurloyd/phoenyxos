@@ -15,6 +15,7 @@
       ./_general.nix
       ./_appearance.nix
       ./_input.nix
+      ./_keybinds.nix
     ];
   };
 }

@@ -4,8 +4,8 @@ updates:
   - package-ecosystem: nix
     directory: /
     schedule:
-      interval: daily
-      time: "04:00"
+      interval: cron
+      cronjob: "0 */2 * * *"
       timezone: Asia/Kolkata
 
     open-pull-requests-limit: 3

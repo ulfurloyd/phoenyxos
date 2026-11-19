@@ -30,10 +30,16 @@
         "lazygit"
         "yazi"
       ];
-      user.terminal-sequences = {
-        input_path = "~/.config/noctalia/templates/sequences";
-        output_path = "~/.cache/terminal-sequences";
-        post_hook = "tee /dev/pts/[0-9]* < ~/.cache/terminal-sequences";
+      user = {
+        terminal-sequences = {
+          input_path = "~/.config/noctalia/templates/sequences";
+          output_path = "~/.cache/terminal-sequences";
+          post_hook = "tee /dev/pts/[0-9]* < ~/.cache/terminal-sequences";
+        };
+        wlr-which-key = {
+          input_path = "~/.config/noctalia/templates/wlr-which-key.yaml";
+          output_path = "~/.config/wlr-which-key/config.yaml";
+        };
       };
     };
   };

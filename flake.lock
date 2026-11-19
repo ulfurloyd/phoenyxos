@@ -47,11 +47,11 @@
     "doomdir": {
       "flake": false,
       "locked": {
-        "path": "./doom",
+        "path": "./modules/features/development/doom",
         "type": "path"
       },
       "original": {
-        "path": "./doom",
+        "path": "./modules/features/development/doom",
         "type": "path"
       },
       "parent": []

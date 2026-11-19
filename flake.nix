@@ -36,7 +36,7 @@
     nix-doom-emacs-unstraightened = {
       url = "github:marienz/nix-doom-emacs-unstraightened";
       inputs = {
-        doomdir.url = "./doom";
+        doomdir.url = "./modules/features/development/doom";
         nixpkgs.follows = "nixpkgs";
       };
     };

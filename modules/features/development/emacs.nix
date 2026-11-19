@@ -1,7 +1,7 @@
 { inputs, ... }:
 let
   doomDir = builtins.path {
-    path = ../../../doom;
+    path = ./doom;
     name = "doomDir";
   };
 in

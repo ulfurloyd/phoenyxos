@@ -9,7 +9,6 @@ It manages my systems and their system/home configurations.
 - hermes: laptop
 
 * structure
-- ~doom/~: Literate Doom Emacs configuration
 - ~modules/features/~: Feature modules organized by domain: desktop, development,
   gaming, media, networking, shell, virtualization
 - ~modules/hosts/~: Host entry points, hardware configuration, and host-specific settings

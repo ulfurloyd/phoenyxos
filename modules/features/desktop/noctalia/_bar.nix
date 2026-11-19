@@ -7,7 +7,6 @@
         "clock"
         "date"
         "tray"
-        "nix-status"
         "recorder"
         "phone-connect"
         "weather"

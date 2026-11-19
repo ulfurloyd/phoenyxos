@@ -14,7 +14,6 @@ in
       "gustav0ar/drive-health"
       "tmelik/system-monitor"
       "noctalia/umbriel-companion"
-      "mindnbytes/nix-status"
     ];
   };
   programs.noctalia.settings.plugin_settings = {

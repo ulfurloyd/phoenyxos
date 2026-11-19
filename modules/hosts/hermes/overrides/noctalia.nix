@@ -5,7 +5,6 @@
         end = lib.mkForce [
           "clock"
           "tray"
-          "nix-status"
           "network"
           "bluetooth"
           "recorder"

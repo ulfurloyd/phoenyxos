@@ -18,6 +18,7 @@
         devenv
         nvim
         emacs
+        zeditor
         kitty
         foot
         zellij

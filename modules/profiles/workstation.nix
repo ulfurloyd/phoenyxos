@@ -55,6 +55,8 @@
         LC_TIME = "en_IN";
       };
 
+      services.gvfs.enable = true;
+
       # kde
       services.xserver.enable = true;
       services.desktopManager.plasma6.enable = true;

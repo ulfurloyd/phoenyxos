@@ -4,6 +4,7 @@
       "noctalia"
       "xwayland-satellite"
       "fcitx5 -d --replace"
+      "mprisence"
     ];
 
     mod_key = "Super";

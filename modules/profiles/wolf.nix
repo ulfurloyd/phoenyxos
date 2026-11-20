@@ -29,6 +29,7 @@
         k9s
         ssh
         mo2-lint
+        music
       ];
 
       home.packages = with pkgs; [

@@ -14,7 +14,8 @@
       };
       dock = {
         enabled = true;
-        auto_hide = true;
+        auto_hide = false;
+        smart_auto_hide = true; 
         icon_size = 40;
         launcher_position = "end";
         reserve_space = false;

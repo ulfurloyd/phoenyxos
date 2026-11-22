@@ -12,6 +12,7 @@
         "gtk3"
         "gtk4"
         "kcolorscheme"
+        "luciole"
         "qt"
         "umbriel"
       ];

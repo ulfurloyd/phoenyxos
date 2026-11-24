@@ -23,5 +23,6 @@ in
       nixos_configuration = "nyx";
     };
     "noctalia/wallhaven".download_dir = "${user.homeDirectory}/Projects/phoenyx-wallpapers/wallpapers";
+    "noctalia/screen_recorder".frame_rate = 30;
   };
 }

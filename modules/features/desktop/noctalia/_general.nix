@@ -10,10 +10,17 @@
           "monitor"
           "screen-time"
         ];
+        show_visualizer = false;
         width = 900;
       };
       dock = {
         enabled = true;
+        pinned = [
+          "helium"
+          "vesktop"
+          "steam"
+          "anime-game-launcher"
+        ];
         auto_hide = false;
         smart_auto_hide = true; 
         icon_size = 40;

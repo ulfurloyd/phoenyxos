@@ -45,6 +45,7 @@
  emacs-lisp
  json
  lua
+ (rust +lsp)
  (go +lsp)
  (nix +lsp +eglot)
  org

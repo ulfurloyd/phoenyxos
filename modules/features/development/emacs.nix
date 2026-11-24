@@ -19,11 +19,22 @@ in
 
       extraBinPackages = with pkgs; [
         direnv
+        yaml-language-server
+
+        # nix
         nixd
         nixfmt
-        yaml-language-server
+
+        # golang
         go
         gopls
+
+        # rust
+        rustc
+        cargo
+        rust-analyzer
+        rustfmt
+        clippy
       ];
     };
 

@@ -72,7 +72,6 @@
     "Mod+Alt+S" = "spawn noctalia msg settings-toggle";
     "Mod+D" = "spawn noctalia msg panel-toggle control-center";
     "Mod+N" = "spawn noctalia msg panel-toggle control-center notifications";
-    "Mod+A" = "spawn noctalia msg panel-toggle noctalia/umbriel-companion:panel";
     "Mod+Ctrl+W" = "spawn noctalia msg panel-toggle wallpaper";
     "Mod+Ctrl+N" = "spawn noctalia msg notification-dnd-toggle";
     "Mod+Ctrl+C" = "spawn noctalia msg panel-toggle clipboard";

@@ -13,7 +13,6 @@
     };
     weather.show_condition = false;
     phone-connect.type = "icefish/phone-connect:bar";
-    umbriel-companion.type = "noctalia/umbriel-companion:bar";
     nix-status.type = "mindnbytes/nix-status:status";
     recorder.type = "noctalia/screen_recorder:recorder";
     sys-summary = {

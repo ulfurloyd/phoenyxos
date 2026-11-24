@@ -25,7 +25,6 @@
       start = [
         "notifications"
         "workspaces"
-        "umbriel-companion"
         "active_window"
       ];
     };

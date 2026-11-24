@@ -13,7 +13,6 @@ in
       "icefish/phone-connect"
       "gustav0ar/drive-health"
       "tmelik/system-monitor"
-      "noctalia/umbriel-companion"
     ];
   };
   programs.noctalia.settings.plugin_settings = {

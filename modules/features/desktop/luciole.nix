@@ -14,8 +14,11 @@
           background_opacity = 0.7;
           chooser_show_preview = true;
           expandable_folders = true;
+          remember_folder_views = true;
+          show_permanent_deletion = true;
           sidebar_tree = true;
-          view_mode = "list";
+          single_window = true;
+          view_mode = "miller";
         };
       };
     };
